@@ -79,4 +79,5 @@ object Dependencies {
         "io.github.raamcosta.compose-destinations:core:${Versions.destination}"
     const val destinationKsp =
         "io.github.raamcosta.compose-destinations:ksp:${Versions.destination}"
+    const val splashscreen = "androidx.core:core-splashscreen:${Versions.splashscreen}"
 }

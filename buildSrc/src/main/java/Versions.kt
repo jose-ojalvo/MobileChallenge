@@ -39,4 +39,5 @@ object Versions {
     const val systemController =  "0.23.1"
     const val webview = "0.24.4-alpha"
     const val destination = "1.8.36-beta"
+    const val splashscreen = "1.0.0"
 }

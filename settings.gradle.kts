@@ -12,3 +12,4 @@ dependencyResolutionManagement {
     }
 }
 include(":app")
+include(":presentation:splash")

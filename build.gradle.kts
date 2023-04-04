@@ -9,5 +9,6 @@ buildscript {
         classpath(Dependencies.kotlinPlugin)
         classpath(Dependencies.hiltGradlePlugin)
         classpath(Dependencies.kotlinSymbolProcessing)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0")
     }
 }

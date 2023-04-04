@@ -6,4 +6,5 @@
 object Namings {
     private const val rootPackage = "com.jojalvo."
     const val appModule = "${rootPackage}mcapp"
+    const val splashModule = "${rootPackage}splash"
 }

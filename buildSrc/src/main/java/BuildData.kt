@@ -8,4 +8,5 @@ object BuildData {
     const val release = "release"
     const val proguardTxt = "proguard-android-optimize.txt"
     const val proguardPro = "proguard-rules.pro"
+    const val consumerRules = "consumer-rules.pro"
 }
