@@ -7,8 +7,8 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.preferencesDataStore
-import com.jojalvo.constants.Constants.ON_BOARDING_COMPLETED
-import com.jojalvo.constants.Constants.PREFERENCE_ON_BOARDING_REF
+import com.jojalvo.constants.DataConstants.ON_BOARDING_COMPLETED
+import com.jojalvo.constants.DataConstants.PREFERENCE_ON_BOARDING_REF
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map

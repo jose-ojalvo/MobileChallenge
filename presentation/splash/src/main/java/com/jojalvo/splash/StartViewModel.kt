@@ -7,6 +7,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
+/**
+ *   @author jojalvo
+ *   @since 1/4/23
+ *   @email josealejandro025@gmail.com
+ */
 @HiltViewModel
 class StartViewModel @Inject constructor(
     private val readOnBoarding: ReadOnBoarding

@@ -12,6 +12,11 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.seconds
 
+/**
+ *   @author jojalvo
+ *   @since 1/4/23
+ *   @email josealejandro025@gmail.com
+ */
 @AndroidEntryPoint
 class StartActivity: ComponentActivity() {
 
