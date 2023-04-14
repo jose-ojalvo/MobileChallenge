@@ -4,6 +4,7 @@
  *   @email josealejandro025@gmail.com
  */
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
+import org.gradle.api.Project
 import org.gradle.api.tasks.TaskContainer
 
 fun BaseAppModuleExtension.configDefaultSettings() {
@@ -26,6 +27,7 @@ fun BaseAppModuleExtension.configComposeProject() {
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.kotlinExtensionVersion
     }
+    configPackageOptions()
 }
 
 fun BaseAppModuleExtension.configPackageOptions() {

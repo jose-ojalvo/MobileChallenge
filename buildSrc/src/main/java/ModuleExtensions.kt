@@ -1,4 +1,5 @@
 import com.android.build.gradle.LibraryExtension
+import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.gradle.api.Action
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
@@ -35,6 +36,28 @@ fun Project.configureAndroidLibrary(name: String) {
 
         kotlinOptions {
             jvmTarget = Versions.javaVersion.toString()
+        }
+    }
+}
+
+fun Project.configComposeProject() {
+    androidLibrary {
+        buildFeatures {
+            compose = true
+        }
+        composeOptions {
+            kotlinCompilerExtensionVersion = Versions.kotlinExtensionVersion
+        }
+        configPackageOptions()
+    }
+}
+
+fun LibraryExtension.configPackageOptions() {
+    packagingOptions {
+        resources.excludes.apply {
+            add(Excludes.kotlinModule)
+            add(Excludes.metaInfAl2)
+            add(Excludes.metaInfAl21)
         }
     }
 }

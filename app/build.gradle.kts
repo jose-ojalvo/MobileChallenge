@@ -10,12 +10,12 @@ android {
     configDefaultSettings()
     configBuildTypes()
     configKotlinOptions(tasks)
-    configPackageOptions()
     configComposeProject()
     configTesting()
 }
 
 dependencies {
+    addModuleDependencies()
     addCommonDependencies()
     addHiltDependencies()
     addComposeDependencies()

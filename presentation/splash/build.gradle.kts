@@ -8,6 +8,8 @@ plugins {
 configureAndroidLibrary(Namings.splashModule)
 
 dependencies {
+    USE_CASE
+    FRAMEWORK
     addCommonDependencies()
     addHiltDependencies()
     implementation(Dependencies.splashscreen)

@@ -80,4 +80,6 @@ object Dependencies {
     const val destinationKsp =
         "io.github.raamcosta.compose-destinations:ksp:${Versions.destination}"
     const val splashscreen = "androidx.core:core-splashscreen:${Versions.splashscreen}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val datastorePref = "androidx.datastore:datastore-preferences:${Versions.datastorePref}"
 }

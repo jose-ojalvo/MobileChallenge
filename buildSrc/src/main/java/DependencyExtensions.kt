@@ -70,6 +70,26 @@ fun DependencyHandler.addTestDependencies() {
     implementation(Dependencies.junit)
 }
 
+fun DependencyHandler.addModuleDependencies() {
+    SPLASH
+    FRAMEWORK
+}
+
+val DependencyHandler.USE_CASE
+    get() = implementation(project(mapOf("path" to Modules.domainUseCase)))
+
+val DependencyHandler.CONSTANTS
+    get() = implementation(project(mapOf("path" to Modules.coreConstants)))
+
+val DependencyHandler.REPOSITORY
+    get() = implementation(project(mapOf("path" to Modules.dataRepository)))
+
+val DependencyHandler.FRAMEWORK
+    get() = implementation(project(mapOf("path" to Modules.coreFramework)))
+
+val DependencyHandler.SPLASH
+    get() = implementation(project(mapOf("path" to Modules.presentationSplash)))
+
 /**
  * Adds a dependency to the `releaseImplementation` configuration.
  *
