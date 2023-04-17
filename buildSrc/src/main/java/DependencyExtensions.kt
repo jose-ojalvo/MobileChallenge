@@ -18,7 +18,7 @@ fun DependencyHandler.addCommonDependencies() {
     implementation(Dependencies.savedState)
     implementation(Dependencies.timber)
     implementation(Dependencies.androidPaging)
-    implementation("com.squareup:javapoet:1.13.0")
+    implementation(Dependencies.javaPoet)
 }
 
 fun DependencyHandler.addHiltDependencies() {
@@ -71,9 +71,17 @@ fun DependencyHandler.addTestDependencies() {
 }
 
 fun DependencyHandler.addModuleDependencies() {
-    SPLASH
+    CONSTANTS
     FRAMEWORK
+    THEME
+    UTILS
+    REPOSITORY
+    USE_CASE
+    SPLASH
 }
+
+val DependencyHandler.UTILS
+    get() = implementation(project(mapOf("path" to Modules.coreUtils)))
 
 val DependencyHandler.USE_CASE
     get() = implementation(project(mapOf("path" to Modules.domainUseCase)))
@@ -89,6 +97,9 @@ val DependencyHandler.FRAMEWORK
 
 val DependencyHandler.SPLASH
     get() = implementation(project(mapOf("path" to Modules.presentationSplash)))
+
+val DependencyHandler.THEME
+    get() = implementation(project(mapOf("path" to Modules.coreTheme)))
 
 /**
  * Adds a dependency to the `releaseImplementation` configuration.

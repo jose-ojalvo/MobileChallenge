@@ -11,6 +11,7 @@ object Dependencies {
     const val kotlinKapt = "kotlin-kapt"
     const val hiltPlugin = "dagger.hilt.android.plugin"
     const val symbolPlugin = "com.google.devtools.ksp"
+    const val gradleTools = "com.android.tools.build:gradle:${Versions.gradleTools}"
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltAndroid}"
     const val hiltGradlePlugin =
         "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltAndroid}"
@@ -82,4 +83,6 @@ object Dependencies {
     const val splashscreen = "androidx.core:core-splashscreen:${Versions.splashscreen}"
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     const val datastorePref = "androidx.datastore:datastore-preferences:${Versions.datastorePref}"
+    const val kotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinLib}"
+    const val javaPoet = "com.squareup:javapoet:${Versions.javaPoet}"
 }

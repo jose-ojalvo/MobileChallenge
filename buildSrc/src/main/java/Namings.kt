@@ -12,4 +12,5 @@ object Namings {
     const val usecaseModule = "${rootPackage}usecase"
     const val repositoryModule = "${rootPackage}repository"
     const val constantsModule = "${rootPackage}constants"
+    const val themeModule = "${rootPackage}theme"
 }
