@@ -10,6 +10,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.fragment.app.FragmentActivity
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.jojalvo.framework.base.jetpack.SetupSystemUi
+import com.jojalvo.onboarding.navgraph.WelcomeNavGraph
 import com.jojalvo.provider.LanguageProvider
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.MobileChallengeTheme
@@ -43,7 +44,7 @@ class WelcomeActivity : FragmentActivity() {
                 modifier = Modifier.fillMaxSize(),
                 color = MobileChallengeColors.background
             ) {
-
+                WelcomeNavGraph()
             }
         }
     }

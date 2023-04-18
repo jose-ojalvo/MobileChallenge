@@ -32,7 +32,7 @@ class StartActivity : ComponentActivity() {
             lifecycle.repeatOnLifecycle(Lifecycle.State.CREATED) {
                 viewModel.startOnBoarding.collectLatest {
                     delay(2.seconds)
-                    //if (it) navigateOnBoardingActivity() else navigateMainActivity()
+                    if (it) navigateOnBoardingActivity() else navigateMainActivity()
                 }
             }
         }
@@ -48,7 +48,7 @@ class StartActivity : ComponentActivity() {
     private fun navigateOnBoardingActivity() {
         launchActivity(
             packageName = packageName,
-            className = ""
+            className = "com.jojalvo.onboarding.WelcomeActivity"
         ).also {
             finish()
         }
@@ -57,7 +57,7 @@ class StartActivity : ComponentActivity() {
     private fun navigateMainActivity() {
         launchActivity(
             packageName = packageName,
-            className = ""
+            className = "com.jojalvo.mcapp.navigation.MainActivity"
         ).also {
             finish()
         }

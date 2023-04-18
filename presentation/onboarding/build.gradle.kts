@@ -5,7 +5,7 @@ plugins {
     id(Dependencies.hiltPlugin)
 }
 
-configureAndroidLibrary(Namings.welcomeModule)
+configureAndroidLibrary(Namings.onBoardingModule)
 
 configComposeProject()
 

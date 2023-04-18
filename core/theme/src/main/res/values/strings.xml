@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Mobile Challenge</string>
+
+    <string name="on_boarding_first_step_title">Mobile Challenge</string>
+    <string name="on_boarding_first_step_description">Test</string>
+
+    <string name="on_boarding_second_step_title">Test</string>
+    <string name="on_boarding_second_step_description">Test</string>
+
+    <string name="on_boarding_third_step_title">Test</string>
+    <string name="on_boarding_third_step_description">Test</string>
+
+    <string name="on_boarding_image_content_description">Pager Image</string>
+
+    <string name="text_finish">Finish</string>
 </resources>

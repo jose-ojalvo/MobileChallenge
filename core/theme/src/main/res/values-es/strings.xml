@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name" translatable="false">Mobile Challenge</string>
+
+    <string name="on_boarding_first_step_title">Desafío móvil</string>
+    <string name="on_boarding_first_step_description">Test</string>
+
+    <string name="on_boarding_second_step_title">Test</string>
+    <string name="on_boarding_second_step_description">Test</string>
+
+    <string name="on_boarding_third_step_title">Test</string>
+    <string name="on_boarding_third_step_description">Test</string>
+
+    <string name="on_boarding_image_content_description">Imagen de introducción a la app</string>
+
+    <string name="text_finish">Finalizar</string>
 </resources>

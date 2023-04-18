@@ -1,9 +1,12 @@
 package com.jojalvo.mcapp.di
 
+import android.content.Context
+import com.jojalvo.framework.base.pref.CacheManager
 import com.jojalvo.mcapp.application.MCApplication
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -19,4 +22,9 @@ class AppModule {
     @Provides
     @Singleton
     fun providesApplication() = MCApplication()
+
+    @Provides
+    @Singleton
+    fun providesCacheManager(@ApplicationContext context: Context) =
+        CacheManager(context)
 }
