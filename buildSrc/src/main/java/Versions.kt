@@ -42,7 +42,9 @@ object Versions {
     const val splashscreen = "1.0.0"
     const val moshi = "1.13.0"
     const val datastorePref = "1.0.0"
+    const val datastore = "1.0.0"
     const val kotlinLib = "1.8.10"
     const val javaPoet = "1.13.0"
     const val gradleTools = "7.4.2"
+    const val securityPref = "1.1.0-alpha05"
 }

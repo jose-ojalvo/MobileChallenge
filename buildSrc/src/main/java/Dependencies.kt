@@ -83,6 +83,8 @@ object Dependencies {
     const val splashscreen = "androidx.core:core-splashscreen:${Versions.splashscreen}"
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     const val datastorePref = "androidx.datastore:datastore-preferences:${Versions.datastorePref}"
+    const val datastore = "androidx.datastore:datastore:${Versions.datastore}"
     const val kotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinLib}"
     const val javaPoet = "com.squareup:javapoet:${Versions.javaPoet}"
+    const val securityPref = "androidx.security:security-crypto-ktx:${Versions.securityPref}"
 }

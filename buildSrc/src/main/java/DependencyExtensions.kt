@@ -66,6 +66,12 @@ fun DependencyHandler.addNavigationDependencies() {
     ksp(Dependencies.destinationKsp)
 }
 
+fun DependencyHandler.addPreferenceDependencies() {
+    implementation(Dependencies.datastore)
+    implementation(Dependencies.datastorePref)
+    implementation(Dependencies.securityPref)
+}
+
 fun DependencyHandler.addTestDependencies() {
     implementation(Dependencies.junit)
 }
@@ -75,10 +81,14 @@ fun DependencyHandler.addModuleDependencies() {
     FRAMEWORK
     THEME
     UTILS
+    PROVIDER
     REPOSITORY
     USE_CASE
     SPLASH
 }
+
+val DependencyHandler.PROVIDER
+    get() = implementation(project(mapOf("path" to Modules.coreProvider)))
 
 val DependencyHandler.UTILS
     get() = implementation(project(mapOf("path" to Modules.coreUtils)))

@@ -10,5 +10,6 @@ object Modules {
     const val presentationSplash = ":presentation:splash"
     const val domainUseCase = ":domain:usecase"
     const val coreUtils = ":core:utils"
+    const val coreProvider = ":core:provider"
     const val coreTheme = ":core:theme"
 }

@@ -1,8 +1,12 @@
 package com.jojalvo.mcapp.di
 
+import com.jojalvo.framework.base.pref.CacheManager
+import com.jojalvo.mcapp.provider.AppLanguageProvider
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 /**
  *   @author jojalvo
@@ -12,4 +16,10 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 class ProviderModule {
+
+    @Singleton
+    @Provides
+    fun provideAppLanguageProvider(cacheManager: CacheManager) =
+        AppLanguageProvider(cacheManager)
+
 }
