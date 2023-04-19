@@ -23,6 +23,21 @@ object Dependencies {
     const val kotlinSymbolProcessing =
         "com.google.devtools.ksp:symbol-processing-gradle-plugin:${Versions.kotlinSymbolProcessing}"
     const val junit = "junit:junit:${Versions.junit}"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.mockWebServer}"
+    const val hamcrest = "org.hamcrest:hamcrest:${Versions.hamcrest}"
+    const val coroutinesTest =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
+    const val testTruth = "androidx.test.ext:truth:${Versions.testTruth}"
+    const val mockk = "io.mockk:mockk:${Versions.mockk}"
+    const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
+    const val testExtJunit = "androidx.test.ext:junit:${Versions.testExtJunit}"
+    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+    const val fragmentTesting = "androidx.fragment:fragment-testing:${Versions.fragmentTesting}"
+    const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
+    const val mockitoInline = "org.mockito:mockito-core:${Versions.mockito}"
+    const val androidTestCore = "androidx.test:core-ktx:${Versions.androidTestCore}"
+    const val junitKotlin = "androidx.test.ext:junit-ktx:${Versions.junitKotlin}"
+    const val archCoreTest = "androidx.arch.core:core-testing:${Versions.archCoreTest}"
     const val gradlePlugin = "com.android.tools.build:gradle:${Versions.gradlePlugin}"
     const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinPlugin}"
     const val material = "com.google.android.material:material:${Versions.material}"
@@ -72,6 +87,7 @@ object Dependencies {
         "com.google.accompanist:accompanist-pager-indicators:${Versions.systemController}"
     const val webview = "com.google.accompanist:accompanist-webview:${Versions.webview}"
     const val testJunit4 = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
+    const val testTurbine = "app.cash.turbine:turbine:${Versions.testTurbine}"
     const val tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
     const val testManifest = "androidx.compose.ui:ui-test-manifest:${Versions.compose}"
     const val destinationAnimation =
@@ -82,6 +98,17 @@ object Dependencies {
         "io.github.raamcosta.compose-destinations:ksp:${Versions.destination}"
     const val splashscreen = "androidx.core:core-splashscreen:${Versions.splashscreen}"
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiCodegen}"
+    const val moshiLazyAdapter =
+        "com.serjltt.moshi:moshi-lazy-adapters:${Versions.moshiLazyAdapter}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofitMoshi}"
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val loggingInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+    const val chuckerDebug = "com.github.chuckerteam.chucker:library:${Versions.chuckerDebug}"
+    const val chuckerRelease =
+        "com.github.chuckerteam.chucker:library-no-op:${Versions.chuckerRelease}"
     const val datastorePref = "androidx.datastore:datastore-preferences:${Versions.datastorePref}"
     const val datastore = "androidx.datastore:datastore:${Versions.datastore}"
     const val kotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinLib}"

@@ -11,6 +11,7 @@ object Modules {
     const val presentationOnBoarding = ":presentation:onboarding"
     const val domainUseCase = ":domain:usecase"
     const val coreUtils = ":core:utils"
+    const val coreTestUtils = ":core:testutils"
     const val coreProvider = ":core:provider"
     const val coreTheme = ":core:theme"
 }

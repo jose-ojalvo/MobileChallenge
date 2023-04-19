@@ -7,6 +7,11 @@ import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 fun DependencyHandler.addCommonDependencies() {
+    addCommonImplDependencies()
+    addTestDependencies()
+}
+
+fun DependencyHandler.addCommonImplDependencies() {
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
@@ -19,6 +24,42 @@ fun DependencyHandler.addCommonDependencies() {
     implementation(Dependencies.timber)
     implementation(Dependencies.androidPaging)
     implementation(Dependencies.javaPoet)
+}
+
+fun DependencyHandler.addNetworkDependency() {
+    implementation(Dependencies.moshi)
+    ksp(Dependencies.moshiCodegen)
+    implementation(Dependencies.moshiLazyAdapter)
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.retrofitMoshi)
+    implementation(Dependencies.okhttp)
+    implementation(Dependencies.loggingInterceptor)
+    testImplementation(Dependencies.okhttp)
+    debugImplementation(Dependencies.chuckerDebug)
+    releaseImplementation(Dependencies.chuckerRelease)
+}
+
+fun DependencyHandler.addTestDependencies() {
+    testImplementation(Dependencies.hamcrest)
+    testImplementation(Dependencies.junit)
+    testImplementation(Dependencies.robolectric)
+    testImplementation(Dependencies.mockito)
+    testImplementation(Dependencies.mockitoInline)
+    testImplementation(Dependencies.androidTestCore)
+    testImplementation(Dependencies.junitKotlin)
+    testImplementation(Dependencies.archCoreTest)
+    testImplementation(Dependencies.mockk)
+    testImplementation(Dependencies.coroutinesTest)
+    testImplementation(Dependencies.testTruth)
+    testImplementation(Dependencies.testJunit4)
+    testImplementation(Dependencies.testTurbine)
+    androidTestImplementation(Dependencies.androidTestCore)
+    androidTestImplementation(Dependencies.robolectric)
+    androidTestImplementation(Dependencies.testExtJunit)
+    androidTestImplementation(Dependencies.espressoCore)
+    debugImplementation(Dependencies.fragmentTesting)
+    debugImplementation(Dependencies.testManifest)
+    debugImplementation("androidx.test:monitor:1.6.1")
 }
 
 fun DependencyHandler.addHiltDependencies() {
@@ -72,10 +113,6 @@ fun DependencyHandler.addPreferenceDependencies() {
     implementation(Dependencies.securityPref)
 }
 
-fun DependencyHandler.addTestDependencies() {
-    implementation(Dependencies.junit)
-}
-
 fun DependencyHandler.addModuleDependencies() {
     CONSTANTS
     FRAMEWORK
@@ -87,6 +124,9 @@ fun DependencyHandler.addModuleDependencies() {
     ONBOARDING
     SPLASH
 }
+
+val DependencyHandler.TEST_UTILS
+    get() = implementation(project(mapOf("path" to Modules.coreTestUtils)))
 
 val DependencyHandler.PROVIDER
     get() = implementation(project(mapOf("path" to Modules.coreProvider)))

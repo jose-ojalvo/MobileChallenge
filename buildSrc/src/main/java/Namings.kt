@@ -15,4 +15,5 @@ object Namings {
     const val themeModule = "${rootPackage}theme"
     const val onBoardingModule = "${rootPackage}onboarding"
     const val providerModule = "${rootPackage}provider"
+    const val testutilsModule = "${rootPackage}testutils"
 }

@@ -8,6 +8,7 @@ plugins {
 configureAndroidLibrary(Namings.splashModule)
 
 dependencies {
+    TEST_UTILS
     UTILS
     USE_CASE
     FRAMEWORK
