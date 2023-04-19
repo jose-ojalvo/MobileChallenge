@@ -13,4 +13,6 @@
     <string name="on_boarding_image_content_description">Imagen de introducción a la app</string>
 
     <string name="text_finish">Finalizar</string>
+
+    <string name="app_exit_label">Pulsa VOLVER otra vez para salir</string>
 </resources>
