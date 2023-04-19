@@ -1,8 +1,8 @@
 package com.jojalvo.splash
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
+import com.jojalvo.testutils.MockkUnitTest
 import com.jojalvo.usecase.onboarding.ReadOnBoarding
 import io.mockk.MockKAnnotations.init
 import io.mockk.coEvery
@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.junit.MockitoJUnitRunner
 
 /**
  *   @author jojalvo
@@ -23,8 +24,8 @@ import org.junit.runner.RunWith
  *   @email josealejandro025@gmail.com
  */
 @OptIn(ExperimentalCoroutinesApi::class)
-@RunWith(AndroidJUnit4::class)
-class StartViewModelTest {
+@RunWith(MockitoJUnitRunner::class)
+class StartViewModelTest : MockkUnitTest() {
 
     @RelaxedMockK
     lateinit var readOnBoarding: ReadOnBoarding
@@ -56,7 +57,7 @@ class StartViewModelTest {
         viewModel.startOnBoarding.test {
             awaitItem().apply {
                 assertThat(this).isNotNull()
-                assertThat(this).isInstanceOf(Boolean::class.java)
+                assertThat(this).isInstanceOf(java.lang.Boolean::class.java)
             }
         }
     }
