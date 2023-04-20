@@ -9,6 +9,7 @@ object Modules {
     const val coreFramework = ":core:framework"
     const val presentationSplash = ":presentation:splash"
     const val presentationOnBoarding = ":presentation:onboarding"
+    const val presentationHome = ":presentation:home"
     const val domainUseCase = ":domain:usecase"
     const val coreUtils = ":core:utils"
     const val coreTestUtils = ":core:testutils"

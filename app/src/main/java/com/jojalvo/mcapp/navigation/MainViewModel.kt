@@ -1,6 +1,7 @@
 package com.jojalvo.mcapp.navigation
 
 import androidx.lifecycle.ViewModel
+import com.jojalvo.provider.ThemeProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -10,5 +11,8 @@ import javax.inject.Inject
  *   @email josealejandro025@gmail.com
  */
 @HiltViewModel
-class MainViewModel @Inject constructor() : ViewModel() {
+class MainViewModel @Inject constructor(private val themeProvider: ThemeProvider) : ViewModel() {
+
+    fun themeProvider() = themeProvider
+
 }

@@ -121,6 +121,7 @@ fun DependencyHandler.addModuleDependencies() {
     PROVIDER
     REPOSITORY
     USE_CASE
+    HOME
     ONBOARDING
     SPLASH
 }
@@ -151,6 +152,9 @@ val DependencyHandler.SPLASH
 
 val DependencyHandler.ONBOARDING
     get() = implementation(project(mapOf("path" to Modules.presentationOnBoarding)))
+
+val DependencyHandler.HOME
+    get() = implementation(project(mapOf("path" to Modules.presentationHome)))
 
 val DependencyHandler.THEME
     get() = implementation(project(mapOf("path" to Modules.coreTheme)))

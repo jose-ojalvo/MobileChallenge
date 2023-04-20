@@ -13,6 +13,7 @@ object Namings {
     const val repositoryModule = "${rootPackage}repository"
     const val constantsModule = "${rootPackage}constants"
     const val themeModule = "${rootPackage}theme"
+    const val homeModule = "${rootPackage}home"
     const val onBoardingModule = "${rootPackage}onboarding"
     const val providerModule = "${rootPackage}provider"
     const val testutilsModule = "${rootPackage}testutils"

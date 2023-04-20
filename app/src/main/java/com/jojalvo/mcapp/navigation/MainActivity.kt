@@ -37,6 +37,7 @@ class MainActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             languageProvider.setLocale(languageProvider.getLanguageCode(), LocalContext.current)
+            MainRoot(finish = finish)
         }
     }
 
