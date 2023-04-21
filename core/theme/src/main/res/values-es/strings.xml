@@ -15,4 +15,8 @@
     <string name="text_finish">Finalizar</string>
 
     <string name="app_exit_label">Pulsa VOLVER otra vez para salir</string>
+
+    <string name="bottom_menu_home">Inicio</string>
+    <string name="bottom_menu_fav">Favoritos</string>
+    <string name="bottom_menu_settings">Ajustes</string>
 </resources>

@@ -22,4 +22,8 @@
     <string name="text_finish">Finish</string>
 
     <string name="app_exit_label">Press BACK again to exit</string>
+
+    <string name="bottom_menu_home">Home</string>
+    <string name="bottom_menu_fav">Favourites</string>
+    <string name="bottom_menu_settings">Settings</string>
 </resources>
