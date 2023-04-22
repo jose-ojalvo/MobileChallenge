@@ -126,38 +126,44 @@ fun DependencyHandler.addModuleDependencies() {
     SPLASH
 }
 
-val DependencyHandler.TEST_UTILS
-    get() = implementation(project(mapOf("path" to Modules.coreTestUtils)))
-
-val DependencyHandler.PROVIDER
-    get() = implementation(project(mapOf("path" to Modules.coreProvider)))
-
-val DependencyHandler.UTILS
-    get() = implementation(project(mapOf("path" to Modules.coreUtils)))
-
-val DependencyHandler.USE_CASE
-    get() = implementation(project(mapOf("path" to Modules.domainUseCase)))
+val DependencyHandler.COMPONENT
+    get() = implementation(project(mapOf("path" to Modules.coreComponent)))
 
 val DependencyHandler.CONSTANTS
     get() = implementation(project(mapOf("path" to Modules.coreConstants)))
 
-val DependencyHandler.REPOSITORY
-    get() = implementation(project(mapOf("path" to Modules.dataRepository)))
-
 val DependencyHandler.FRAMEWORK
     get() = implementation(project(mapOf("path" to Modules.coreFramework)))
-
-val DependencyHandler.SPLASH
-    get() = implementation(project(mapOf("path" to Modules.presentationSplash)))
-
-val DependencyHandler.ONBOARDING
-    get() = implementation(project(mapOf("path" to Modules.presentationOnBoarding)))
 
 val DependencyHandler.HOME
     get() = implementation(project(mapOf("path" to Modules.presentationHome)))
 
+val DependencyHandler.ONBOARDING
+    get() = implementation(project(mapOf("path" to Modules.presentationOnBoarding)))
+
+val DependencyHandler.PROVIDER
+    get() = implementation(project(mapOf("path" to Modules.coreProvider)))
+
+val DependencyHandler.REPOSITORY
+    get() = implementation(project(mapOf("path" to Modules.dataRepository)))
+
+val DependencyHandler.SETTINGS
+    get() = implementation(project(mapOf("path" to Modules.presentationSettings)))
+
+val DependencyHandler.SPLASH
+    get() = implementation(project(mapOf("path" to Modules.presentationSplash)))
+
+val DependencyHandler.TEST_UTILS
+    get() = implementation(project(mapOf("path" to Modules.coreTestUtils)))
+
 val DependencyHandler.THEME
     get() = implementation(project(mapOf("path" to Modules.coreTheme)))
+
+val DependencyHandler.USE_CASE
+    get() = implementation(project(mapOf("path" to Modules.domainUseCase)))
+
+val DependencyHandler.UTILS
+    get() = implementation(project(mapOf("path" to Modules.coreUtils)))
 
 /**
  * Adds a dependency to the `releaseImplementation` configuration.
