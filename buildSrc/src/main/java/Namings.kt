@@ -17,4 +17,5 @@ object Namings {
     const val onBoardingModule = "${rootPackage}onboarding"
     const val providerModule = "${rootPackage}provider"
     const val testutilsModule = "${rootPackage}testutils"
+    const val componentModule = "${rootPackage}component"
 }

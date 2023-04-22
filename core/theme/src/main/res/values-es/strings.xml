@@ -19,4 +19,6 @@
     <string name="bottom_menu_home">Inicio</string>
     <string name="bottom_menu_fav">Favoritos</string>
     <string name="bottom_menu_settings">Ajustes</string>
+
+    <string name="toolbar_navigation_back_button">Atrás</string>
 </resources>
