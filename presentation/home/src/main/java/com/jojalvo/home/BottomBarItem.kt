@@ -17,7 +17,7 @@ enum class BottomBarItem(
 ) {
     HOME(
         title = R.string.bottom_menu_home,
-        icon = Icons.Filled.AddHome
+        icon = Icons.Filled.Home
     ),
     FAV(
         title = R.string.bottom_menu_fav,
