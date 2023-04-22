@@ -11,7 +11,7 @@ import com.jojalvo.theme.R
  *   @since 21/4/23
  *   @email josealejandro025@gmail.com
  */
-enum class BottomBarItems(
+enum class BottomBarItem(
     @StringRes val title: Int,
     val icon: ImageVector
 ) {
