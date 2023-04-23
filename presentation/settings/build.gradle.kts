@@ -6,23 +6,24 @@ plugins {
     id(Dependencies.symbolPlugin)
 }
 
-configureAndroidLibrary(Namings.homeModule)
+configureAndroidLibrary(Namings.settingsModule)
 
 configComposeProject()
 
 ksp {
     arg("compose-destinations.mode", "navgraphs")
-    arg("compose-destinations.moduleName", "home")
+    arg("compose-destinations.moduleName", "settings")
 }
 
 dependencies {
+    CONSTANTS
     USE_CASE
     FRAMEWORK
     THEME
     TEST_UTILS
     PROVIDER
     UTILS
-    SETTINGS
+    COMPONENT
     addCommonDependencies()
     addHiltDependencies()
     addComposeDependencies()

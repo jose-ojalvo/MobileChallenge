@@ -58,9 +58,9 @@ class AppThemeProvider constructor(private val context: Context) : ThemeProvider
 
     override fun setNightMode(forceNight: Boolean) {
         theme = if (forceNight) {
-            Theme.DARK
+            DARK
         } else {
-            Theme.LIGHT
+            LIGHT
         }
     }
 

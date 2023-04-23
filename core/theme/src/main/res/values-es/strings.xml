@@ -21,4 +21,10 @@
     <string name="bottom_menu_settings">Ajustes</string>
 
     <string name="toolbar_navigation_back_button">Atrás</string>
+
+    <string name="settings_theme_mode">Tema</string>
+    <string name="settings_term_and_privacy">Términos y condiciones</string>
+    <string name="settings_app_language">Idioma</string>
+    <string name="settings_about">Sobre mí</string>
+    <string name="settings_app_version">Versión</string>
 </resources>

@@ -20,6 +20,7 @@ import com.jojalvo.home.BottomBarItem.FAV
 import com.jojalvo.home.BottomBarItem.SETTINGS
 import com.google.accompanist.insets.navigationBarsHeight
 import com.jojalvo.provider.NavigationProvider
+import com.jojalvo.settings.SettingsScreen
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.RobotoFonts
 import com.jojalvo.theme.selectedBottomItemColor
@@ -50,7 +51,10 @@ fun HomeScreen(navigator: NavigationProvider) {
                 when (bottomItem) {
                     HOME -> Unit
                     FAV -> Unit
-                    SETTINGS -> Unit
+                    SETTINGS -> SettingsScreen(
+                        modifier = modifier,
+                        navigator = navigator
+                    )
                 }
             }
         )

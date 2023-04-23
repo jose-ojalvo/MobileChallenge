@@ -1,5 +1,8 @@
 package com.jojalvo.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 /**
@@ -51,3 +54,6 @@ val unselectedBottomItemColor = Gray500
 
 val navigationBackIconDark = White
 val navigationBackIconLight = Black
+
+val ColorScheme.dividerColor: Color
+    @Composable get() = if (isSystemInDarkTheme()) DividerDark else DividerLight
