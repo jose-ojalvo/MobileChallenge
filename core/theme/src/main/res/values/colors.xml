@@ -12,6 +12,8 @@
     <color name="blue_primary_dark">#05060B</color>
     <color name="red_primary">#D13438</color>
     <color name="red_primary_dark">#982626</color>
+    <color name="orange_primary">#f7b740</color>
+    <color name="orange_primary_dark">#ad802b</color>
 
     <color name="color_background">#F5F2F5</color>
     <color name="color_background_dark">#24292E</color>
