@@ -5,6 +5,8 @@ import com.ramcosta.composedestinations.navigation.navigate
 import com.jojalvo.provider.NavigationProvider
 import com.jojalvo.settings.destinations.AboutScreenDestination
 import com.jojalvo.settings.destinations.LanguageScreenDestination
+import com.jojalvo.settings.destinations.TermsAndPrivacyScreenDestination
+import com.jojalvo.settings.features.termsandprivacy.view.TermsAndPrivacyScreen
 
 /**
  *   @author jojalvo
@@ -24,7 +26,7 @@ class AppNavigationProvider constructor(
     }
 
     override fun openTermAndPrivacy() {
-        // Nothing to do yet
+        navController.navigate(TermsAndPrivacyScreenDestination)
     }
 
     override fun openAppLanguage() {
