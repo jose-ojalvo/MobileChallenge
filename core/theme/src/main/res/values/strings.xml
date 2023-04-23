@@ -34,4 +34,7 @@
     <string name="settings_app_language">App Language</string>
     <string name="settings_about">About Me</string>
     <string name="settings_app_version">App Version</string>
+
+    <string name="text_language_english">English</string>
+    <string name="text_language_spanish">Spanish</string>
 </resources>

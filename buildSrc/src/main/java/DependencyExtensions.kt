@@ -114,16 +114,19 @@ fun DependencyHandler.addPreferenceDependencies() {
 }
 
 fun DependencyHandler.addModuleDependencies() {
+    COMPONENT
     CONSTANTS
+    ENTITY
     FRAMEWORK
-    THEME
-    UTILS
+    HOME
     PROVIDER
     REPOSITORY
-    USE_CASE
-    HOME
-    ONBOARDING
+    SETTINGS
     SPLASH
+    TEST_UTILS
+    THEME
+    USE_CASE
+    UTILS
 }
 
 val DependencyHandler.COMPONENT
@@ -131,6 +134,9 @@ val DependencyHandler.COMPONENT
 
 val DependencyHandler.CONSTANTS
     get() = implementation(project(mapOf("path" to Modules.coreConstants)))
+
+val DependencyHandler.ENTITY
+    get() = implementation(project(mapOf("path" to Modules.domainEntity)))
 
 val DependencyHandler.FRAMEWORK
     get() = implementation(project(mapOf("path" to Modules.coreFramework)))

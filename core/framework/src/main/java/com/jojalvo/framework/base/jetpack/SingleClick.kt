@@ -38,7 +38,7 @@ private class MultipleEventsCutterImpl : MultipleEventsCutter {
     }
 }
 
-fun Modifier.clickableSingle(
+fun Modifier.singleClick(
     enabled: Boolean = true,
     onClickLabel: String? = null,
     role: Role? = null,

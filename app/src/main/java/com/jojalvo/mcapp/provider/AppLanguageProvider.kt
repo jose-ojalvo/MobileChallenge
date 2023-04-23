@@ -34,7 +34,7 @@ class AppLanguageProvider constructor(private val cacheManager: CacheManager) : 
         val resources = context.resources
         val configuration = resources.configuration
         configuration.setLocale(locale)
-        context.createConfigurationContext(configuration)
+        resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 
 }

@@ -1,7 +1,9 @@
 package com.jojalvo.mcapp.di
 
 import androidx.navigation.NavController
+import com.ramcosta.composedestinations.navigation.navigate
 import com.jojalvo.provider.NavigationProvider
+import com.jojalvo.settings.destinations.LanguageScreenDestination
 
 /**
  *   @author jojalvo
@@ -25,7 +27,7 @@ class AppNavigationProvider constructor(
     }
 
     override fun openAppLanguage() {
-        // Nothing to do yet
+        navController.navigate(LanguageScreenDestination)
     }
 
     override fun openAbout() {

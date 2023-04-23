@@ -24,6 +24,7 @@ dependencies {
     PROVIDER
     UTILS
     COMPONENT
+    ENTITY
     addCommonDependencies()
     addHiltDependencies()
     addComposeDependencies()

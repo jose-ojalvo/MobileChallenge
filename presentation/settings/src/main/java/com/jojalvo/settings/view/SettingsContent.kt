@@ -25,7 +25,7 @@ import androidx.constraintlayout.compose.Dimension
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.jojalvo.component.widget.MCDivider
 import com.jojalvo.component.widget.ThemeSwitch
-import com.jojalvo.framework.base.jetpack.clickableSingle
+import com.jojalvo.framework.base.jetpack.singleClick
 import com.jojalvo.provider.NavigationProvider
 import com.jojalvo.settings.viewmodel.SettingsViewModel
 import com.jojalvo.theme.*
@@ -122,7 +122,7 @@ fun SettingsContent(
                             top.linkTo(viewDivider1.bottom)
                             start.linkTo(parent.start)
                         }
-                        .clickableSingle {
+                        .singleClick {
                             navigator?.openAppLanguage()
                         }
                 ) {
@@ -158,7 +158,7 @@ fun SettingsContent(
                             top.linkTo(viewDivider2.bottom)
                             start.linkTo(parent.start)
                         }
-                        .clickableSingle {
+                        .singleClick {
                             navigator?.openAbout()
                         }
                 ) {
@@ -194,7 +194,7 @@ fun SettingsContent(
                             top.linkTo(viewDivider3.bottom)
                             start.linkTo(parent.start)
                         }
-                        .clickableSingle {
+                        .singleClick {
                             navigator?.openTermAndPrivacy()
                         }
                 ) {

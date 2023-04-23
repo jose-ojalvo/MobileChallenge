@@ -8,6 +8,7 @@ object Namings {
     const val appModule = "${rootPackage}mcapp"
     const val componentModule = "${rootPackage}component"
     const val constantsModule = "${rootPackage}constants"
+    const val entityModule = "${rootPackage}entity"
     const val frameworkModule = "${rootPackage}framework"
     const val homeModule = "${rootPackage}home"
     const val onBoardingModule = "${rootPackage}onboarding"

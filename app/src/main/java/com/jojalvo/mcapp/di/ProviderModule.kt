@@ -3,8 +3,10 @@ package com.jojalvo.mcapp.di
 import android.content.Context
 import com.jojalvo.framework.base.pref.CacheManager
 import com.jojalvo.mcapp.provider.AppLanguageProvider
+import com.jojalvo.mcapp.provider.AppResourceProvider
 import com.jojalvo.mcapp.provider.AppThemeProvider
 import com.jojalvo.provider.LanguageProvider
+import com.jojalvo.provider.ResourceProvider
 import com.jojalvo.provider.ThemeProvider
 import dagger.Module
 import dagger.Provides
@@ -21,6 +23,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class ProviderModule {
+
+    @Provides
+    @Singleton
+    fun provideAppResourceProvider(@ApplicationContext context: Context): ResourceProvider =
+        AppResourceProvider(context)
 
     @Provides
     @Singleton

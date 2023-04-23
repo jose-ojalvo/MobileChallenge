@@ -27,4 +27,7 @@
     <string name="settings_app_language">Idioma</string>
     <string name="settings_about">Sobre mí</string>
     <string name="settings_app_version">Versión</string>
+
+    <string name="text_language_english">English</string>
+    <string name="text_language_spanish">Spanish</string>
 </resources>

@@ -1,0 +1,21 @@
+package com.jojalvo.framework.base.jetpack
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
+import java.util.*
+
+/**
+ *   @author jojalvo
+ *   @since 23/4/23
+ *   @email josealejandro025@gmail.com
+ */
+@Suppress("DEPRECATION")
+@Composable
+fun SetLanguage(languageCode: String) {
+    val locale = Locale(languageCode)
+    val configuration = LocalConfiguration.current
+    configuration.setLocale(locale)
+    val resources = LocalContext.current.resources
+    resources.updateConfiguration(configuration, resources.displayMetrics)
+}
