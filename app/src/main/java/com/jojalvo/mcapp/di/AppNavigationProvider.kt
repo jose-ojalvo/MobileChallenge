@@ -3,6 +3,7 @@ package com.jojalvo.mcapp.di
 import androidx.navigation.NavController
 import com.ramcosta.composedestinations.navigation.navigate
 import com.jojalvo.provider.NavigationProvider
+import com.jojalvo.settings.destinations.AboutScreenDestination
 import com.jojalvo.settings.destinations.LanguageScreenDestination
 
 /**
@@ -31,6 +32,6 @@ class AppNavigationProvider constructor(
     }
 
     override fun openAbout() {
-        // Nothing to do yet
+        navController.navigate(AboutScreenDestination)
     }
 }
