@@ -16,7 +16,7 @@
 
     <string name="app_exit_label">Pulsa VOLVER otra vez para salir</string>
 
-    <string name="bottom_menu_home">Inicio</string>
+    <string name="bottom_menu_users">Usuarios</string>
     <string name="bottom_menu_fav">Favoritos</string>
     <string name="bottom_menu_settings">Ajustes</string>
 
@@ -30,4 +30,6 @@
 
     <string name="text_language_english">English</string>
     <string name="text_language_spanish">Spanish</string>
+    <string name="text_no_data_found">No se encontraron resultados.</string>
+    <string name="text_retry">Reintentar</string>
 </resources>

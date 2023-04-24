@@ -23,7 +23,7 @@
 
     <string name="app_exit_label">Press BACK again to exit</string>
 
-    <string name="bottom_menu_home">Home</string>
+    <string name="bottom_menu_users">Users</string>
     <string name="bottom_menu_fav">Favourites</string>
     <string name="bottom_menu_settings">Settings</string>
 
@@ -37,4 +37,6 @@
 
     <string name="text_language_english">English</string>
     <string name="text_language_spanish">Spanish</string>
+    <string name="text_no_data_found">No suitable data found.</string>
+    <string name="text_retry">Retry</string>
 </resources>
