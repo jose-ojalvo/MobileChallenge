@@ -16,13 +16,14 @@ ksp {
 }
 
 dependencies {
-    USE_CASE
     FRAMEWORK
-    THEME
-    TEST_UTILS
     PROVIDER
-    UTILS
     SETTINGS
+    TEST_UTILS
+    THEME
+    USE_CASE
+    USERS
+    UTILS
     addCommonDependencies()
     addHiltDependencies()
     addComposeDependencies()

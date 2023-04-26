@@ -113,6 +113,11 @@ fun DependencyHandler.addPreferenceDependencies() {
     implementation(Dependencies.securityPref)
 }
 
+fun DependencyHandler.addStorageDependencies() {
+    implementation(Dependencies.roomKtx)
+    ksp(Dependencies.roomCompiler)
+}
+
 fun DependencyHandler.addModuleDependencies() {
     COMPONENT
     CONSTANTS
@@ -125,6 +130,7 @@ fun DependencyHandler.addModuleDependencies() {
     SPLASH
     TEST_UTILS
     THEME
+    USERS
     USE_CASE
     UTILS
 }
@@ -143,6 +149,9 @@ val DependencyHandler.FRAMEWORK
 
 val DependencyHandler.HOME
     get() = implementation(project(mapOf("path" to Modules.presentationHome)))
+
+val DependencyHandler.MODEL
+    get() = implementation(project(mapOf("path" to Modules.dataModel)))
 
 val DependencyHandler.ONBOARDING
     get() = implementation(project(mapOf("path" to Modules.presentationOnBoarding)))
@@ -170,6 +179,9 @@ val DependencyHandler.USE_CASE
 
 val DependencyHandler.UTILS
     get() = implementation(project(mapOf("path" to Modules.coreUtils)))
+
+val DependencyHandler.USERS
+    get() = implementation(project(mapOf("path" to Modules.presentationUsers)))
 
 /**
  * Adds a dependency to the `releaseImplementation` configuration.

@@ -15,8 +15,8 @@ enum class BottomBarItem(
     @StringRes val title: Int,
     val icon: ImageVector
 ) {
-    HOME(
-        title = R.string.bottom_menu_home,
+    USERS(
+        title = R.string.bottom_menu_users,
         icon = Icons.Filled.Home
     ),
     FAV(

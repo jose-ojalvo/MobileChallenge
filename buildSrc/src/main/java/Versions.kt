@@ -55,6 +55,7 @@ object Versions {
     const val destination = "1.8.36-beta"
     const val splashscreen = "1.0.0"
     const val moshi = "1.13.0"
+    const val room = "2.5.0"
     const val moshiCodegen = "1.13.0"
     const val moshiLazyAdapter = "2.2"
     const val retrofit = "2.9.0"

@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class StartViewModel @Inject constructor(
     private val readOnBoarding: ReadOnBoarding
-): MvvmViewModel() {
+) : MvvmViewModel() {
 
     private val _startOnBoarding = MutableStateFlow(false)
     val startOnBoarding = _startOnBoarding.asStateFlow()

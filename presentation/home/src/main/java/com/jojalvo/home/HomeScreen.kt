@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.jojalvo.home
 
 import androidx.compose.animation.Crossfade
@@ -15,7 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jojalvo.home.BottomBarItem.HOME
+import com.jojalvo.home.BottomBarItem.USERS
 import com.jojalvo.home.BottomBarItem.FAV
 import com.jojalvo.home.BottomBarItem.SETTINGS
 import com.google.accompanist.insets.navigationBarsHeight
@@ -25,6 +27,7 @@ import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.RobotoFonts
 import com.jojalvo.theme.selectedBottomItemColor
 import com.jojalvo.theme.unselectedBottomItemColor
+import com.jojalvo.users.UsersScreen
 import com.ramcosta.composedestinations.annotation.Destination
 
 /**
@@ -37,8 +40,11 @@ import com.ramcosta.composedestinations.annotation.Destination
 fun HomeScreen(navigator: NavigationProvider) {
     val scaffoldState = rememberScaffoldState()
     val (currentBottomTab, setCurrentBottomTab) = rememberSaveable {
-        mutableStateOf(HOME)
+        mutableStateOf(USERS)
     }
+
+    val bottomSheetState =
+        rememberModalBottomSheetState(initialValue = ModalBottomSheetValue.Hidden)
 
     Crossfade(currentBottomTab) { bottomItem ->
         Scaffold(
@@ -49,7 +55,11 @@ fun HomeScreen(navigator: NavigationProvider) {
                     .padding(it)
                     .background(MobileChallengeColors.background)
                 when (bottomItem) {
-                    HOME -> Unit
+                    USERS -> UsersScreen(
+                        modifier = Modifier,
+                        navigator = navigator,
+                        bottomSheetState = bottomSheetState
+                    )
                     FAV -> Unit
                     SETTINGS -> SettingsScreen(
                         modifier = modifier,
@@ -59,7 +69,6 @@ fun HomeScreen(navigator: NavigationProvider) {
             }
         )
     }
-
 }
 
 @Composable

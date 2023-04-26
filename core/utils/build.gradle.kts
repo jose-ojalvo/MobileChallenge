@@ -6,6 +6,7 @@ plugins {
 configureAndroidLibrary(Namings.utilsModule)
 
 dependencies {
+    ENTITY
     CONSTANTS
     addCommonDependencies()
     addComposeDependencies()

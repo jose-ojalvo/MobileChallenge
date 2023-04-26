@@ -21,6 +21,7 @@ object Dependencies {
     const val hiltAndroidCompiler =
         "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroid}"
     const val hiltAndroidTesting = "com.google.dagger:hilt-android-testing:${Versions.hiltAndroid}"
+    const val json = "org.json:json:20210307"
     const val kotlinSymbolProcessing =
         "com.google.devtools.ksp:symbol-processing-gradle-plugin:${Versions.kotlinSymbolProcessing}"
     const val junit = "junit:junit:${Versions.junit}"
@@ -107,6 +108,8 @@ object Dependencies {
     const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
     const val loggingInterceptor =
         "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
     const val chuckerDebug = "com.github.chuckerteam.chucker:library:${Versions.chuckerDebug}"
     const val chuckerRelease =
         "com.github.chuckerteam.chucker:library-no-op:${Versions.chuckerRelease}"

@@ -11,6 +11,7 @@ object Modules {
     const val coreTestUtils = ":core:testutils"
     const val coreTheme = ":core:theme"
     const val coreUtils = ":core:utils"
+    const val dataModel = ":data:model"
     const val dataRepository = ":data:repository"
     const val domainEntity = ":domain:entity"
     const val domainUseCase = ":domain:usecase"
@@ -18,4 +19,5 @@ object Modules {
     const val presentationOnBoarding = ":presentation:onboarding"
     const val presentationSettings = ":presentation:settings"
     const val presentationSplash = ":presentation:splash"
+    const val presentationUsers = ":presentation:users"
 }

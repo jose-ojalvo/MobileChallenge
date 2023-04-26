@@ -15,6 +15,6 @@ dependencies {
     addComposeDependencies()
     addPreferenceDependencies()
     implementation(Dependencies.hiltAndroidTesting)
-    //addStorageDependencies()
-    //addNetworkDependency()
+    addStorageDependencies()
+    addNetworkDependency()
 }
