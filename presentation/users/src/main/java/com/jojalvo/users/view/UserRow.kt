@@ -61,7 +61,7 @@ fun UserRow(
                     .clip(RoundedCornerShape(size = 80.dp))
             )
             Column(
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(5.dp),
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(top = 12.dp, start = 4.dp, bottom = 4.dp)

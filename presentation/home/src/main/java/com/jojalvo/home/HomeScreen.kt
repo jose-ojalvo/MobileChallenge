@@ -56,7 +56,7 @@ fun HomeScreen(navigator: NavigationProvider) {
                     .background(MobileChallengeColors.background)
                 when (bottomItem) {
                     USERS -> UsersScreen(
-                        modifier = Modifier,
+                        modifier = modifier,
                         navigator = navigator,
                         bottomSheetState = bottomSheetState
                     )
