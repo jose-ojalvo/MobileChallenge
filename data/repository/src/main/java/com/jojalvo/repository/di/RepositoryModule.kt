@@ -1,7 +1,10 @@
 package com.jojalvo.repository.di
 
 import android.content.Context
+import com.jojalvo.local.dao.UsersDao
+import com.jojalvo.remote.service.users.UsersService
 import com.jojalvo.repository.onboarding.OnBoardingRepository
+import com.jojalvo.repository.users.UsersRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,5 +26,12 @@ class RepositoryModule {
     fun providesOnBoardingRepository(
         @ApplicationContext context: Context
     ) = OnBoardingRepository(context)
+
+    @Singleton
+    @Provides
+    fun providesUsersRepository(
+        service: UsersService,
+        dao: UsersDao
+    ) = UsersRepository(service, dao)
 
 }

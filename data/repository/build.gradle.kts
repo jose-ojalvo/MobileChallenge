@@ -7,8 +7,13 @@ plugins {
 configureAndroidLibrary(Namings.repositoryModule)
 
 dependencies {
-    CONSTANTS
     FRAMEWORK
+    CONSTANTS
+    LOCAL
+    REMOTE
+    MODEL
+    ENTITY
+    TEST_UTILS
     addCommonDependencies()
     addHiltDependencies()
     implementation(Dependencies.datastorePref)

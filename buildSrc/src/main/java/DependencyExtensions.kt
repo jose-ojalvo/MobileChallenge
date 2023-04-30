@@ -153,6 +153,12 @@ val DependencyHandler.HOME
 val DependencyHandler.MODEL
     get() = implementation(project(mapOf("path" to Modules.dataModel)))
 
+val DependencyHandler.LOCAL
+    get() = implementation(project(mapOf("path" to Modules.dataLocal)))
+
+val DependencyHandler.REMOTE
+    get() = implementation(project(mapOf("path" to Modules.dataRemote)))
+
 val DependencyHandler.ONBOARDING
     get() = implementation(project(mapOf("path" to Modules.presentationOnBoarding)))
 

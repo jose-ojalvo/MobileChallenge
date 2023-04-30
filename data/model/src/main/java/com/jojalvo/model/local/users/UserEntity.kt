@@ -21,6 +21,7 @@ data class UserEntity(
     @ColumnInfo(name = NAME) val name: Name?,
     @ColumnInfo(name = LOCATION) val location: Location?,
     @ColumnInfo(name = EMAIL) val email: String?,
+    @ColumnInfo(name = PHONE) val phone: String?,
     @ColumnInfo(name = DOB) val dob: Dob?,
     @ColumnInfo(name = PICTURE) val picture: Picture?,
 ) {
@@ -31,6 +32,7 @@ data class UserEntity(
         const val NAME = "name"
         const val LOCATION = "location"
         const val EMAIL = "email"
+        const val PHONE = "phone"
         const val DOB = "dob"
         const val PICTURE = "picture"
     }

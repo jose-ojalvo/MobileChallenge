@@ -13,6 +13,8 @@ object Modules {
     const val coreUtils = ":core:utils"
     const val dataModel = ":data:model"
     const val dataRepository = ":data:repository"
+    const val dataLocal = ":data:local"
+    const val dataRemote = ":data:remote"
     const val domainEntity = ":domain:entity"
     const val domainUseCase = ":domain:usecase"
     const val presentationHome = ":presentation:home"
