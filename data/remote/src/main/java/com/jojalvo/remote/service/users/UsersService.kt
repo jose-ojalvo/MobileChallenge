@@ -2,6 +2,7 @@ package com.jojalvo.remote.service.users
 
 import com.jojalvo.model.remote.users.UsersResponse
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 /**
  *   @author jojalvo
@@ -10,11 +11,11 @@ import retrofit2.http.GET
  */
 interface UsersService {
 
-    @GET(USERS)
-    suspend fun getUserList(): UsersResponse
+    @GET(".")
+    suspend fun getUserList(@Query(USERS) results: Int = 20): UsersResponse
 
     companion object {
-        const val USERS = "results=20"
+        const val USERS = "results"
     }
 
 }

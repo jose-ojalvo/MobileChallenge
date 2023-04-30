@@ -25,6 +25,7 @@ import com.jojalvo.provider.NavigationProvider
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.MobileChallengeTheme
 import com.jojalvo.theme.R
+import com.jojalvo.users.view.UsersContent
 import com.jojalvo.users.viewmodel.UsersUIState
 import com.jojalvo.users.viewmodel.UsersViewModel
 import com.jojalvo.utils.extension.cast
@@ -65,24 +66,24 @@ fun UsersPage(
     modifier: Modifier
 ) {
     when (uiState) {
-        is UsersUIState.UsersData -> {
-            //TODO: Instantiate UsersContent()
-        }
+        is UsersUIState.UsersData -> UsersContent(
+            viewModel = viewModel,
+            paddingValues = paddings,
+            viewState = uiState.cast<UsersUIState.UsersData<UsersViewState>>().result,
+            selectItem = {
+                //TODO: Open user detail
+            },
+        )
         is UsersUIState.Error -> {
             ErrorView(
                 e = uiState.cast<UsersUIState.Error>().throwable,
-                action = {
-                    //TODO: Launch viewModel.getUsers()
-                }
+                action = { viewModel.getUsers() }
             )
         }
         is UsersUIState.Empty -> EmptyView(modifier = Modifier)
         is UsersUIState.Loading -> LoadingView()
     }
-
-    LaunchedEffect(key1 = viewModel, block = {
-        //TODO: Launch viewModel.getUsers()
-    })
+    LaunchedEffect(key1 = viewModel, block = { viewModel.getUsers() })
 }
 
 @Composable

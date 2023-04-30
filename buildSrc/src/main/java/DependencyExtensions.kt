@@ -124,6 +124,7 @@ fun DependencyHandler.addModuleDependencies() {
     ENTITY
     FRAMEWORK
     HOME
+    ONBOARDING
     PROVIDER
     REPOSITORY
     SETTINGS
