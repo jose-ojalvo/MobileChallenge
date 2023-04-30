@@ -1,4 +1,4 @@
-package com.jojalvo.users.view
+package com.jojalvo.users.list.view
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -18,7 +18,7 @@ import com.jojalvo.constants.Constants.EMPTY_STRING
 import com.jojalvo.entity.user.Result
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.MobileChallengeTypography
-import com.jojalvo.users.viewmodel.UsersViewModel
+import com.jojalvo.users.list.viewmodel.UsersViewModel
 import com.jojalvo.utils.extension.getNameSurname
 
 /**

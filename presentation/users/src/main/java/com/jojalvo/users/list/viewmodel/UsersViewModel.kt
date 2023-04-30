@@ -1,4 +1,4 @@
-package com.jojalvo.users.viewmodel
+package com.jojalvo.users.list.viewmodel
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingConfig

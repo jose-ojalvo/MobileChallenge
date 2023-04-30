@@ -25,9 +25,9 @@ import com.jojalvo.provider.NavigationProvider
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.MobileChallengeTheme
 import com.jojalvo.theme.R
-import com.jojalvo.users.view.UsersContent
-import com.jojalvo.users.viewmodel.UsersUIState
-import com.jojalvo.users.viewmodel.UsersViewModel
+import com.jojalvo.users.list.view.UsersContent
+import com.jojalvo.users.list.viewmodel.UsersUIState
+import com.jojalvo.users.list.viewmodel.UsersViewModel
 import com.jojalvo.utils.extension.cast
 import com.ramcosta.composedestinations.annotation.Destination
 

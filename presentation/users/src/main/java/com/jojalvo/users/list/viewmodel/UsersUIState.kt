@@ -1,4 +1,4 @@
-package com.jojalvo.users.viewmodel
+package com.jojalvo.users.list.viewmodel
 
 /**
  *   @author jojalvo

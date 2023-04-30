@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.jojalvo.users.view
+package com.jojalvo.users.list.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -19,7 +19,7 @@ import androidx.compose.material.CircularProgressIndicator
 import com.jojalvo.framework.base.jetpack.rememberFlowWithLifecycle
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.users.UsersViewState
-import com.jojalvo.users.viewmodel.UsersViewModel
+import com.jojalvo.users.list.viewmodel.UsersViewModel
 
 /**
  *   @author jojalvo
