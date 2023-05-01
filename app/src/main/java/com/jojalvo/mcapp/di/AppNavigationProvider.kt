@@ -7,6 +7,7 @@ import com.jojalvo.settings.destinations.AboutScreenDestination
 import com.jojalvo.settings.destinations.LanguageScreenDestination
 import com.jojalvo.settings.destinations.TermsAndPrivacyScreenDestination
 import com.jojalvo.settings.features.termsandprivacy.view.TermsAndPrivacyScreen
+import com.jojalvo.users.detail.destinations.UserDetailScreenDestination
 
 /**
  *   @author jojalvo
@@ -22,7 +23,7 @@ class AppNavigationProvider constructor(
     }
 
     override fun openDetail() {
-        // Nothing to do yet
+        navController.navigate(UserDetailScreenDestination)
     }
 
     override fun openTermAndPrivacy() {

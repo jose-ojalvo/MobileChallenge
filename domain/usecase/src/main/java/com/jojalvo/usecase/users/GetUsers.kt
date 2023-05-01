@@ -31,6 +31,4 @@ class GetUsers @Inject constructor(
             pagingSourceFactory = { UserPagingSource(repository) },
         ).flow
     }
-
-
 }

@@ -1,5 +1,6 @@
 package com.jojalvo.local.converter
 
+import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 import com.jojalvo.entity.user.*
 
@@ -25,12 +26,12 @@ class NameConverter {
 class StreetConverter {
     @TypeConverter
     fun fromStreet(street: Street): String {
-        return "${street.number}|${street.name}"
+        return "${street.number}/${street.name}"
     }
 
     @TypeConverter
     fun toStreet(streetString: String): Street {
-        val split = streetString.split("|")
+        val split = streetString.split("/")
         return Street(split[0].toInt(), split[1])
     }
 }
@@ -38,12 +39,12 @@ class StreetConverter {
 class CoordinatesConverter {
     @TypeConverter
     fun fromCoordinates(coordinates: Coordinates): String {
-        return "${coordinates.latitude}|${coordinates.longitude}"
+        return "${coordinates.latitude}/${coordinates.longitude}"
     }
 
     @TypeConverter
     fun toCoordinates(coordinatesString: String): Coordinates {
-        val split = coordinatesString.split("|")
+        val split = coordinatesString.split("/")
         return Coordinates(split[0], split[1])
     }
 }
@@ -51,12 +52,12 @@ class CoordinatesConverter {
 class TimezoneConverter {
     @TypeConverter
     fun fromTimezone(timezone: Timezone): String {
-        return "${timezone.offset}|${timezone.description}"
+        return "${timezone.offset}/${timezone.description}"
     }
 
     @TypeConverter
     fun toTimezone(timezoneString: String): Timezone {
-        val split = timezoneString.split("|")
+        val split = timezoneString.split("/")
         return Timezone(split[0], split[1])
     }
 }
@@ -64,13 +65,13 @@ class TimezoneConverter {
 class LocationConverter {
     @TypeConverter
     fun fromLocation(location: Location): String {
-        return "${location.street}|" +
+        return StreetConverter().fromStreet(location.street) + "|" +
                 "${location.city}|" +
                 "${location.state}|" +
                 "${location.country}|" +
                 "${location.postcode}|" +
-                "${location.coordinates}|" +
-                "${location.timezone}"
+                CoordinatesConverter().fromCoordinates(location.coordinates) + "|" +
+                TimezoneConverter().fromTimezone(location.timezone) + "|"
     }
 
     @TypeConverter

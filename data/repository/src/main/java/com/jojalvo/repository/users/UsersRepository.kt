@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 import com.jojalvo.entity.user.Result
 import com.jojalvo.model.dto.users.toUserDtoList
+import com.jojalvo.model.dto.users.toUserEntityList
 
 /**
  *   @author jojalvo
@@ -25,13 +26,14 @@ constructor(
 
     fun getUsersList(cacheData: Boolean = false): Flow<List<Result>> = flow {
         if (cacheData) {
-            val dao = dao.getUsersList()
-            if (dao.isNotEmpty()) {
-                emit(dao.toUserDtoList())
+            val localData = dao.getUsersList()
+            if (localData.isNotEmpty()) {
+                emit(localData.toUserDtoList())
             } else {
                 val remoteData = service.getUserList()
                 val response = remoteData.results
                 if (!response.isNullOrEmpty()) {
+                    dao.insert(response.toUserEntityList())
                     emit(response.toUserDtoList())
                 } else {
                     emit(emptyList())

@@ -39,7 +39,7 @@ class UserPagingSource(
         val page = params.key ?: 1
         return try {
             val userList = mutableListOf<Result>()
-            repository.getUsersList().collect { userList.addAll(it) }
+            repository.getUsersList(cacheData = true).collect { userList.addAll(it) }
             LoadResult.Page(
                 data = userList,
                 prevKey = if (page == 1) null else page - 1,

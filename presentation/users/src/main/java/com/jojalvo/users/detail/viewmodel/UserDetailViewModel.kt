@@ -1,5 +1,6 @@
 package com.jojalvo.users.detail.viewmodel
 
+import com.jojalvo.framework.base.mvvm.MvvmViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -11,6 +12,6 @@ import javax.inject.Inject
 @HiltViewModel
 class UserDetailViewModel @Inject constructor(
 
-) {
+) : MvvmViewModel() {
 
 }

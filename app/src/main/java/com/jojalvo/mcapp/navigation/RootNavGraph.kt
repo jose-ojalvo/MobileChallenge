@@ -2,6 +2,7 @@ package com.jojalvo.mcapp.navigation
 
 import com.jojalvo.home.HomeNavGraph
 import com.jojalvo.settings.SettingsNavGraph
+import com.jojalvo.users.detail.UsersNavGraph
 import com.ramcosta.composedestinations.spec.DestinationSpec
 import com.ramcosta.composedestinations.spec.NavGraphSpec
 
@@ -19,6 +20,7 @@ object RootNavGraph : NavGraphSpec {
 
     override val nestedNavGraphs = listOf(
         HomeNavGraph,
+        UsersNavGraph,
         SettingsNavGraph
     )
 }
