@@ -23,23 +23,23 @@ constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val dao: UsersDao
 ) {
-
-    fun getUsersList(cacheData: Boolean = false): Flow<List<Result>> = flow {
-        if (cacheData) {
-            val localData = dao.getUsersList()
-            if (localData.isNotEmpty()) {
-                emit(localData.toUserDtoList())
+    fun getRemoteCachedUserList(): Flow<List<Result>> = flow {
+        val localData = dao.getUsersList()
+        if (localData.isNotEmpty()) {
+            emit(localData.toUserDtoList())
+        } else {
+            val remoteData = service.getUserList()
+            val response = remoteData.results
+            if (!response.isNullOrEmpty()) {
+                dao.insert(response.toUserEntityList())
+                emit(response.toUserDtoList())
             } else {
-                val remoteData = service.getUserList()
-                val response = remoteData.results
-                if (!response.isNullOrEmpty()) {
-                    dao.insert(response.toUserEntityList())
-                    emit(response.toUserDtoList())
-                } else {
-                    emit(emptyList())
-                }
+                emit(emptyList())
             }
         }
+    }
+
+    fun getRemoteUserList(): Flow<List<Result>> = flow {
         val remoteData = service.getUserList()
         val response = remoteData.results
         if (!response.isNullOrEmpty()) {
@@ -49,4 +49,5 @@ constructor(
         }
     }
 
+    suspend fun getLocalUserList() = dao.getUsersList()
 }

@@ -28,8 +28,10 @@
     <string name="settings_about">Sobre mí</string>
     <string name="settings_app_version">Versión</string>
 
-    <string name="text_language_english">English</string>
-    <string name="text_language_spanish">Spanish</string>
+    <string name="text_about_me_linkedin">¡Mi perfil de LinkedIn! 😎</string>
+    <string name="text_about_me_github">¡Mi perfil de GitHub! 😃</string>
+    <string name="text_language_english">Inglés</string>
+    <string name="text_language_spanish">Español</string>
     <string name="text_no_data_found">No se encontraron resultados.</string>
     <string name="text_retry">Reintentar</string>
 </resources>

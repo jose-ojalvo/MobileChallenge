@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -106,7 +107,11 @@ fun AboutScreen(
                         )
                         SmallSpacer()
                         ClickableText(
-                            text = AnnotatedString(text = githubLink),
+                            text = AnnotatedString(
+                                text = stringResource(
+                                    id = R.string.text_about_me_github
+                                )
+                            ),
                             style = MobileChallengeTypography.titleLarge,
                             onClick = {
                                 uriHandler.openUri(githubLink)
@@ -114,7 +119,11 @@ fun AboutScreen(
                         )
                         SmallSpacer()
                         ClickableText(
-                            text = AnnotatedString(text = linkedInLink),
+                            text = AnnotatedString(
+                                text = stringResource(
+                                    id = R.string.text_about_me_linkedin
+                                )
+                            ),
                             style = MobileChallengeTypography.titleLarge,
                             onClick = {
                                 uriHandler.openUri(linkedInLink)
@@ -176,13 +185,21 @@ fun AboutScreenPreview() {
                     )
                     SmallSpacer()
                     ClickableText(
-                        text = AnnotatedString(text = "https://github.com/jose-ojalvo"),
+                        text = AnnotatedString(
+                            text = stringResource(
+                                id = R.string.text_about_me_github
+                            )
+                        ),
                         style = MobileChallengeTypography.titleLarge,
                         onClick = {}
                     )
                     SmallSpacer()
                     ClickableText(
-                        text = AnnotatedString(text = "https://www.linkedin.com/in/jose-alejandro-ojalvo-prim-65a7b315a/"),
+                        text = AnnotatedString(
+                            text = stringResource(
+                                id = R.string.text_about_me_linkedin
+                            )
+                        ),
                         style = MobileChallengeTypography.titleLarge,
                         onClick = {}
                     )

@@ -39,7 +39,7 @@ fun UsersContent(
         state = rememberSwipeRefreshState(
             isRefreshing = pagingItems.loadState.refresh == LoadState.Loading
         ),
-        onRefresh = { viewModel.getUsers() },
+        onRefresh = { viewModel.getRemoteUsers() },
         indicatorPadding = paddingValues,
         indicator = { state, trigger ->
             SwipeRefreshIndicator(
@@ -62,7 +62,7 @@ fun UsersContent(
                         UserRow(
                             viewModel,
                             dto = it,
-                            onDetailClick = {  }
+                            onDetailClick = { }
                         )
                     }
                 }

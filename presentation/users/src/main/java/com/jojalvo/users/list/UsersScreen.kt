@@ -29,7 +29,6 @@ import com.jojalvo.users.list.view.UsersContent
 import com.jojalvo.users.list.viewmodel.UsersUIState
 import com.jojalvo.users.list.viewmodel.UsersViewModel
 import com.jojalvo.utils.extension.cast
-import com.ramcosta.composedestinations.annotation.Destination
 
 /**
  *   @author jojalvo
@@ -75,13 +74,13 @@ fun UsersPage(
         is UsersUIState.Error -> {
             ErrorView(
                 e = uiState.cast<UsersUIState.Error>().throwable,
-                action = { viewModel.getUsers() }
+                action = { viewModel.getCachedUsers() }
             )
         }
         is UsersUIState.Empty -> EmptyView(modifier = Modifier)
         is UsersUIState.Loading -> LoadingView()
     }
-    LaunchedEffect(key1 = viewModel, block = { viewModel.getUsers() })
+    LaunchedEffect(key1 = viewModel, block = { viewModel.getCachedUsers() })
 }
 
 @Composable

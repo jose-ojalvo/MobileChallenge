@@ -35,6 +35,8 @@
     <string name="settings_about">About Me</string>
     <string name="settings_app_version">App Version</string>
 
+    <string name="text_about_me_linkedin">Check my LinkedIn!</string>
+    <string name="text_about_me_github">Check my GitHub!</string>
     <string name="text_language_english">English</string>
     <string name="text_language_spanish">Spanish</string>
     <string name="text_no_data_found">No suitable data found.</string>

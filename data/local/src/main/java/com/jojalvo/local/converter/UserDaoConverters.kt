@@ -1,6 +1,5 @@
 package com.jojalvo.local.converter
 
-import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 import com.jojalvo.entity.user.*
 

@@ -1,7 +1,8 @@
 package com.jojalvo.usecase.di
 
 import com.jojalvo.repository.users.UsersRepository
-import com.jojalvo.usecase.users.GetUsers
+import com.jojalvo.usecase.users.GetCachedUsers
+import com.jojalvo.usecase.users.GetRemoteUsers
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +20,12 @@ class UsersDomainModule {
 
     @Singleton
     @Provides
-    fun provideGetUsers(repository: UsersRepository): GetUsers =
-        GetUsers(repository)
+    fun providesGetCachedUsers(repository: UsersRepository): GetCachedUsers =
+        GetCachedUsers(repository)
+
+    @Singleton
+    @Provides
+    fun providesGetRemoteUsers(repository: UsersRepository): GetRemoteUsers =
+        GetRemoteUsers(repository)
 
 }

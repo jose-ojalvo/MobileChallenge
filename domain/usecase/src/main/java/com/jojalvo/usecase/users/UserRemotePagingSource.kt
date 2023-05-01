@@ -8,10 +8,10 @@ import java.io.IOException
 
 /**
  *   @author jojalvo
- *   @since 30/4/23
+ *   @since 1/5/23
  *   @email josealejandro025@gmail.com
  */
-class UserPagingSource(
+class UserRemotePagingSource(
     private val repository: UsersRepository
 ) : PagingSource<Int, Result>() {
 
@@ -39,7 +39,7 @@ class UserPagingSource(
         val page = params.key ?: 1
         return try {
             val userList = mutableListOf<Result>()
-            repository.getUsersList(cacheData = true).collect { userList.addAll(it) }
+            repository.getRemoteUserList().collect { userList.addAll(it) }
             LoadResult.Page(
                 data = userList,
                 prevKey = if (page == 1) null else page - 1,
