@@ -39,10 +39,12 @@ constructor(
         }
     }
 
-    fun getRemoteUserList(): Flow<List<Result>> = flow {
+    fun getUpdatedUserList(): Flow<List<Result>> = flow {
         val remoteData = service.getUserList()
         val response = remoteData.results
         if (!response.isNullOrEmpty()) {
+            dao.clearData()
+            dao.insert(response.toUserEntityList())
             emit(response.toUserDtoList())
         } else {
             emit(emptyList())

@@ -52,10 +52,40 @@ fun UserEntity.toUserDto() = Result(
 )
 
 @JvmName("toUserResponseListUserEntity")
-fun List<UserResponse>.toUserEntityList() = map { it.toUserEntity() }
+fun List<UserResponse>.toUserEntityList() =
+    map {
+        it.toUserEntity()
+    }.sortedWith(
+        compareBy<UserEntity>
+        {
+            it.name?.first
+        }.thenBy {
+            it.name?.last
+        }
+    )
 
 @JvmName("toUserDtoListUserResponse")
-fun List<UserResponse>.toUserDtoList() = map { it.toUserDto() }
+fun List<UserResponse>.toUserDtoList() =
+    map {
+        it.toUserDto()
+    }.sortedWith(
+        compareBy<Result>
+        {
+            it.name?.first
+        }.thenBy {
+            it.name?.last
+        }
+    )
 
 @JvmName("toUserDtoListUserEntity")
-fun List<UserEntity>.toUserDtoList() = map { it.toUserDto() }
+fun List<UserEntity>.toUserDtoList() =
+    map {
+        it.toUserDto()
+    }.sortedWith(
+        compareBy<Result>
+        {
+            it.name?.first
+        }.thenBy {
+            it.name?.last
+        }
+    )

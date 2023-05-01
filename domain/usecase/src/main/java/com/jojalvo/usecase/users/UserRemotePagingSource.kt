@@ -39,7 +39,7 @@ class UserRemotePagingSource(
         val page = params.key ?: 1
         return try {
             val userList = mutableListOf<Result>()
-            repository.getRemoteUserList().collect { userList.addAll(it) }
+            repository.getUpdatedUserList().collect { userList.addAll(it) }
             LoadResult.Page(
                 data = userList,
                 prevKey = if (page == 1) null else page - 1,

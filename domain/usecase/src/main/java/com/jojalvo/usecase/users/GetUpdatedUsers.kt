@@ -15,10 +15,10 @@ import javax.inject.Inject
  *   @since 1/5/23
  *   @email josealejandro025@gmail.com
  */
-class GetRemoteUsers @Inject constructor(
+class GetUpdatedUsers @Inject constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val repository: UsersRepository
-) : FlowPagingUseCase<GetRemoteUsers.Params, Result>() {
+) : FlowPagingUseCase<GetUpdatedUsers.Params, Result>() {
 
     data class Params(
         val pagingConfig: PagingConfig

@@ -5,7 +5,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.jojalvo.framework.base.mvvm.MvvmViewModel
 import com.jojalvo.usecase.users.GetCachedUsers
-import com.jojalvo.usecase.users.GetRemoteUsers
+import com.jojalvo.usecase.users.GetUpdatedUsers
 import com.jojalvo.users.UsersViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -20,7 +20,7 @@ import javax.inject.Inject
 @HiltViewModel
 class UsersViewModel @Inject constructor(
     private val getCachedUsers: GetCachedUsers,
-    private val getRemoteUsers: GetRemoteUsers
+    private val getUpdatedUsers: GetUpdatedUsers
 ) : MvvmViewModel() {
 
     private val _uiState = MutableStateFlow<UsersUIState<*>>(UsersUIState.Empty)
@@ -41,8 +41,8 @@ class UsersViewModel @Inject constructor(
 
     fun getRemoteUsers() = safeLaunch {
         _uiState.value = UsersUIState.Loading
-        val params = GetRemoteUsers.Params(config)
-        val pagedFlow = getRemoteUsers(params).cachedIn(scope = viewModelScope)
+        val params = GetUpdatedUsers.Params(config)
+        val pagedFlow = getUpdatedUsers(params).cachedIn(scope = viewModelScope)
         _uiState.value = UsersUIState.UsersData(UsersViewState(pagedData = pagedFlow))
     }
 }

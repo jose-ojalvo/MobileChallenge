@@ -22,4 +22,7 @@ interface BaseDao<T> {
     @Delete
     suspend fun delete(data: T)
 
+    @Query("DELETE FROM user_table")
+    suspend fun clearData()
+
 }

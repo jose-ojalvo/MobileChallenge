@@ -2,6 +2,7 @@ package com.jojalvo.local.dao
 
 import androidx.room.Dao
 import androidx.room.Query
+import androidx.room.Transaction
 import com.jojalvo.framework.base.room.dao.BaseDao
 import com.jojalvo.model.local.users.UserEntity
 
