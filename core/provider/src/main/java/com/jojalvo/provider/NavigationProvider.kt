@@ -1,5 +1,7 @@
 package com.jojalvo.provider
 
+import com.jojalvo.entity.user.Result
+
 /**
  *   @author jojalvo
  *   @since 20/4/23
@@ -8,7 +10,7 @@ package com.jojalvo.provider
 interface NavigationProvider {
     fun navigateUp()
 
-    fun openDetail()
+    fun openDetail(user: Result)
 
     fun openTermAndPrivacy()
 

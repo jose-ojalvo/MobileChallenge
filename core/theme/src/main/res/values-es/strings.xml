@@ -21,6 +21,7 @@
     <string name="bottom_menu_settings">Ajustes</string>
 
     <string name="toolbar_navigation_back_button">Atrás</string>
+    <string name="toolbar_user_detail_title">Usuario</string>
 
     <string name="settings_theme_mode">Tema</string>
     <string name="settings_term_and_privacy">Términos y condiciones</string>
@@ -34,4 +35,10 @@
     <string name="text_language_spanish">Español</string>
     <string name="text_no_data_found">No se encontraron resultados.</string>
     <string name="text_retry">Reintentar</string>
+    <string name="text_information">Información</string>
+    <string name="text_name">Nombre</string>
+    <string name="text_email">Correo electrónico</string>
+    <string name="text_country">País</string>
+    <string name="text_city">Ciudad</string>
+    <string name="text_phone">Nº teléfono</string>
 </resources>

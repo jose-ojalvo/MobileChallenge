@@ -19,6 +19,7 @@ import androidx.compose.material.CircularProgressIndicator
 import com.jojalvo.framework.base.jetpack.rememberFlowWithLifecycle
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.users.UsersViewState
+import com.jojalvo.entity.user.Result
 import com.jojalvo.users.list.viewmodel.UsersViewModel
 
 /**
@@ -31,7 +32,7 @@ fun UsersContent(
     viewModel: UsersViewModel = hiltViewModel(),
     paddingValues: PaddingValues,
     viewState: UsersViewState,
-    selectItem: (Int) -> Unit = {}
+    selectItem: (Result) -> Unit = {}
 ) {
     val pagingItems = rememberFlowWithLifecycle(viewState.pagedData).collectAsLazyPagingItems()
 
@@ -62,7 +63,7 @@ fun UsersContent(
                         UserRow(
                             viewModel,
                             dto = it,
-                            onDetailClick = { }
+                            onDetailClick = { selectItem.invoke(it) }
                         )
                     }
                 }

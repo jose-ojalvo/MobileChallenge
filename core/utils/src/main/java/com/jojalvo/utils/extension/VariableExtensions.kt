@@ -1,5 +1,6 @@
 package com.jojalvo.utils.extension
 
+import com.jojalvo.constants.Constants.EMPTY_STRING
 import java.math.BigDecimal
 import java.math.BigDecimal.ONE
 import java.math.BigDecimal.ZERO
@@ -31,3 +32,5 @@ fun Boolean?.isNull(): Boolean = this == null
 fun Boolean?.isNotNull(): Boolean = this != null
 
 fun Boolean.toFloat() = if (this) 1f else 0f
+
+fun String?.safeNull() = this ?: EMPTY_STRING

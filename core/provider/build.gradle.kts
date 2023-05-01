@@ -8,6 +8,7 @@ configureAndroidLibrary(Namings.providerModule)
 configComposeProject()
 
 dependencies {
+    ENTITY
     UTILS
     addCommonDependencies()
     addComposeDependencies()

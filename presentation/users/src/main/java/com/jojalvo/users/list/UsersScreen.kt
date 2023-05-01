@@ -69,7 +69,7 @@ fun UsersPage(
             viewModel = viewModel,
             paddingValues = paddings,
             viewState = uiState.cast<UsersUIState.UsersData<UsersViewState>>().result,
-            selectItem = { navigator.openDetail() },
+            selectItem = { navigator.openDetail(it) },
         )
         is UsersUIState.Error -> {
             ErrorView(

@@ -1,13 +1,13 @@
 package com.jojalvo.mcapp.di
 
 import androidx.navigation.NavController
-import com.ramcosta.composedestinations.navigation.navigate
 import com.jojalvo.provider.NavigationProvider
 import com.jojalvo.settings.destinations.AboutScreenDestination
 import com.jojalvo.settings.destinations.LanguageScreenDestination
 import com.jojalvo.settings.destinations.TermsAndPrivacyScreenDestination
-import com.jojalvo.settings.features.termsandprivacy.view.TermsAndPrivacyScreen
 import com.jojalvo.users.detail.destinations.UserDetailScreenDestination
+import com.jojalvo.entity.user.Result
+import com.ramcosta.composedestinations.navigation.navigate
 
 /**
  *   @author jojalvo
@@ -22,8 +22,8 @@ class AppNavigationProvider constructor(
         navController.navigateUp()
     }
 
-    override fun openDetail() {
-        navController.navigate(UserDetailScreenDestination)
+    override fun openDetail(user: Result) {
+        navController.navigate(UserDetailScreenDestination(user))
     }
 
     override fun openTermAndPrivacy() {
