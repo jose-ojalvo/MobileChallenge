@@ -1,8 +1,7 @@
 # MobileChallenge
 ![Alt text](https://cdn-bkbcj.nitrocdn.com/xXGyDftZNTJakTYAyusNDmbcdztlQjmL/assets/images/optimized/rev-749eaa2/wp-content/uploads/2017/06/Mobile-App-developers.jpg "Mobile Challange")
 
-Besides providing exceptional transportation services, Also runs a physical store which sells Products.
-Api Reference: https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json
+Welcome to the random application mobile challenge made by @jojalvo! :)
 
 # Third-party libraries used
 
