@@ -20,7 +20,7 @@ import kotlin.reflect.KClass
  *   @since 3/5/23
  *   @email josealejandro025@gmail.com
  */
-class BaseServiceTest<S : Any>(service: KClass<S>) {
+abstract class BaseServiceTest<S : Any>(service: KClass<S>) {
 
     lateinit var mockWebServer: MockWebServer
     private lateinit var moshi: Moshi
