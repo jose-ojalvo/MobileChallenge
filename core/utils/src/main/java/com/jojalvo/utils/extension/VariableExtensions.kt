@@ -33,4 +33,4 @@ fun Boolean?.isNotNull(): Boolean = this != null
 
 fun Boolean.toFloat() = if (this) 1f else 0f
 
-fun String?.safeNull() = this ?: EMPTY_STRING
+fun String?.safeNull(default: String = EMPTY_STRING) = this ?: default

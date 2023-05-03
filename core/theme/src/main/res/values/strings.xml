@@ -9,13 +9,13 @@
     <string name="pref_theme_default_value" translatable="false">@string/pref_theme_system_value</string>
 
     <string name="on_boarding_first_step_title">Mobile Challenge</string>
-    <string name="on_boarding_first_step_description">Test</string>
+    <string name="on_boarding_first_step_description">In this Mobile challenge app you will be able to see a list of users!</string>
 
-    <string name="on_boarding_second_step_title">Test</string>
-    <string name="on_boarding_second_step_description">Test</string>
+    <string name="on_boarding_second_step_title">Save your users</string>
+    <string name="on_boarding_second_step_description">Save your favorite users so you can have access to them later on</string>
 
-    <string name="on_boarding_third_step_title">Test</string>
-    <string name="on_boarding_third_step_description">Test</string>
+    <string name="on_boarding_third_step_title">Configure the app</string>
+    <string name="on_boarding_third_step_description">In the settings section you will have various customization options</string>
 
     <string name="on_boarding_image_content_description">Pager Image</string>
 

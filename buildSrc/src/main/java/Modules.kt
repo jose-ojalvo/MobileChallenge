@@ -18,6 +18,7 @@ object Modules {
     const val domainEntity = ":domain:entity"
     const val domainUseCase = ":domain:usecase"
     const val presentationHome = ":presentation:home"
+    const val presentationFavorites = ":presentation:favorites"
     const val presentationOnBoarding = ":presentation:onboarding"
     const val presentationSettings = ":presentation:settings"
     const val presentationSplash = ":presentation:splash"

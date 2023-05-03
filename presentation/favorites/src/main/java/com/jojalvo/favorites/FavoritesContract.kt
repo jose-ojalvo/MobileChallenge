@@ -1,15 +1,15 @@
-package com.jojalvo.users.list
+package com.jojalvo.favorites
 
 import androidx.paging.PagingData
+import com.jojalvo.entity.user.Result
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
-import com.jojalvo.entity.user.Result
 
 /**
  *   @author jojalvo
- *   @since 30/4/23
+ *   @since 3/5/23
  *   @email josealejandro025@gmail.com
  */
-data class UsersViewState(
+data class FavoritesViewState(
     val pagedData: Flow<PagingData<Result>> = emptyFlow()
 )

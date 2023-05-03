@@ -4,6 +4,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import com.jojalvo.constants.Constants.EMPTY_STRING
 import com.jojalvo.entity.user.Result
+import com.jojalvo.utils.extension.safeNull
 
 /**
  *   @author jojalvo
@@ -17,7 +18,7 @@ fun UserDetailContent(
     LazyColumn {
         item("header") {
             UserDetailHeaderView(
-                imageUrl = data.picture?.large ?: EMPTY_STRING
+                imageUrl = data.picture?.large.orEmpty()
             )
         }
 

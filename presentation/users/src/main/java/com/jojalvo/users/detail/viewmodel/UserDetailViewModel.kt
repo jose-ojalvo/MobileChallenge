@@ -40,19 +40,18 @@ class UserDetailViewModel @Inject constructor(
         }
     }
 
-    fun searchExistingUsers(data: Result) =
-        safeLaunch {
-            val params = ExistsUser.Params(
-                title = data.name?.title.safeNull(),
-                first = data.name?.first.safeNull(),
-                last = data.name?.last.safeNull(),
-            )
-            execute(existsUser(params)) { exists ->
-                if (exists) {
-                    _uiState.value = UserDetailUIState.ExistingUser
-                } else {
-                    _uiState.value = UserDetailUIState.Empty
-                }
+    fun searchExistingUsers(data: Result) = safeLaunch {
+        val params = ExistsUser.Params(
+            title = data.name?.title.safeNull(),
+            first = data.name?.first.safeNull(),
+            last = data.name?.last.safeNull(),
+        )
+        call(existsUser(params)) { exists ->
+            if (exists) {
+                _uiState.value = UserDetailUIState.ExistingUser
+            } else {
+                _uiState.value = UserDetailUIState.Empty
             }
         }
+    }
 }

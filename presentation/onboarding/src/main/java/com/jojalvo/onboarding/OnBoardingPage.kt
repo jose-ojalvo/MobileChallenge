@@ -23,8 +23,8 @@ sealed class OnBoardingPage(
 
     class Second(context: Context) : OnBoardingPage(
         image = R.drawable.ic_app_back,
-        title = context.getString(R.string.on_boarding_first_step_title),
-        description = context.getString(R.string.on_boarding_first_step_description)
+        title = context.getString(R.string.on_boarding_second_step_title),
+        description = context.getString(R.string.on_boarding_second_step_description)
     )
 
     class Third(context: Context) : OnBoardingPage(

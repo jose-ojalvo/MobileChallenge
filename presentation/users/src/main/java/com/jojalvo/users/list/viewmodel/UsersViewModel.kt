@@ -5,9 +5,8 @@ import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.jojalvo.framework.base.mvvm.MvvmViewModel
 import com.jojalvo.usecase.users.GetCachedUsers
-import com.jojalvo.usecase.users.GetLocalUsers
 import com.jojalvo.usecase.users.GetUpdatedUsers
-import com.jojalvo.users.UsersViewState
+import com.jojalvo.users.list.UsersViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

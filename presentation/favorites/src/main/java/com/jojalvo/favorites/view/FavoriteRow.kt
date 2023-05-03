@@ -1,4 +1,4 @@
-package com.jojalvo.users.list.view
+package com.jojalvo.favorites.view
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,14 +17,15 @@ import com.jojalvo.entity.user.Result
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.MobileChallengeTypography
 import com.jojalvo.utils.extension.getNameSurname
+import com.jojalvo.utils.extension.safeNull
 
 /**
  *   @author jojalvo
- *   @since 30/4/23
+ *   @since 3/5/23
  *   @email josealejandro025@gmail.com
  */
 @Composable
-fun UserRow(
+fun FavoriteRow(
     dto: Result,
     onDetailClick: () -> Unit = {}
 ) {
@@ -63,7 +64,7 @@ fun UserRow(
                     .padding(top = 12.dp, start = 4.dp, bottom = 4.dp)
             ) {
                 Text(
-                    text = dto.name?.getNameSurname() ?: "John Doe",
+                    text = dto.name?.getNameSurname().safeNull("John Doe"),
                     modifier = Modifier
                         .fillMaxWidth(),
                     style = MobileChallengeTypography.titleLarge

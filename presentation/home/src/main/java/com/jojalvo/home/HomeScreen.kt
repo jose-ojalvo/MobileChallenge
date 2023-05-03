@@ -21,13 +21,14 @@ import com.jojalvo.home.BottomBarItem.USERS
 import com.jojalvo.home.BottomBarItem.FAV
 import com.jojalvo.home.BottomBarItem.SETTINGS
 import com.google.accompanist.insets.navigationBarsHeight
+import com.jojalvo.favorites.FavoritesScreen
 import com.jojalvo.provider.NavigationProvider
 import com.jojalvo.settings.SettingsScreen
 import com.jojalvo.theme.MobileChallengeColors
 import com.jojalvo.theme.RobotoFonts
 import com.jojalvo.theme.selectedBottomItemColor
 import com.jojalvo.theme.unselectedBottomItemColor
-import com.jojalvo.users.UsersScreen
+import com.jojalvo.users.list.UsersScreen
 import com.ramcosta.composedestinations.annotation.Destination
 
 /**
@@ -60,7 +61,11 @@ fun HomeScreen(navigator: NavigationProvider) {
                         navigator = navigator,
                         bottomSheetState = bottomSheetState
                     )
-                    FAV -> Unit
+                    FAV -> FavoritesScreen(
+                        modifier = modifier,
+                        navigator = navigator,
+                        bottomSheetState = bottomSheetState
+                    )
                     SETTINGS -> SettingsScreen(
                         modifier = modifier,
                         navigator = navigator

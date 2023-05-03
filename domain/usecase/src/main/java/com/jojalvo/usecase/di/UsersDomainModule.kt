@@ -1,7 +1,6 @@
 package com.jojalvo.usecase.di
 
 import com.jojalvo.repository.users.UsersRepository
-import com.jojalvo.usecase.favorites.ExistsUser
 import com.jojalvo.usecase.users.GetCachedUsers
 import com.jojalvo.usecase.users.GetLocalUsers
 import com.jojalvo.usecase.users.GetUpdatedUsers

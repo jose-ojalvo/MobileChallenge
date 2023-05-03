@@ -5,6 +5,8 @@ import com.jojalvo.local.dao.favorite.FavoriteDao
 import com.jojalvo.model.dto.favorites.toUserDtoList
 import com.jojalvo.entity.user.Result
 import com.jojalvo.model.dto.favorites.toFavUserEntity
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 /**
@@ -18,7 +20,9 @@ constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val dao: FavoriteDao
 ) {
-    suspend fun getFavUsers() = dao.getFavUserList().toUserDtoList()
+    suspend fun getFavUsers(): Flow<List<Result>> = flow {
+        emit(dao.getFavUserList().toUserDtoList())
+    }
 
     suspend fun saveUserItem(user: Result?) {
         user?.let {

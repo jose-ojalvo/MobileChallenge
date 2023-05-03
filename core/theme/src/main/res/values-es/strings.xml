@@ -2,13 +2,13 @@
     <string name="app_name" translatable="false">Mobile Challenge</string>
 
     <string name="on_boarding_first_step_title">Desafío móvil</string>
-    <string name="on_boarding_first_step_description">Test</string>
+    <string name="on_boarding_first_step_description">¡En esta aplicación de desafío móvil podrás ver una lista de usuarios!</string>
 
-    <string name="on_boarding_second_step_title">Test</string>
-    <string name="on_boarding_second_step_description">Test</string>
+    <string name="on_boarding_second_step_title">Guarda usuarios</string>
+    <string name="on_boarding_second_step_description">Guarda tus usuarios favoritos para poder acceder a ellos más adelante</string>
 
-    <string name="on_boarding_third_step_title">Test</string>
-    <string name="on_boarding_third_step_description">Test</string>
+    <string name="on_boarding_third_step_title">Configura la app</string>
+    <string name="on_boarding_third_step_description">En la sección de ajustes tendrás diversas opciones de personalización</string>
 
     <string name="on_boarding_image_content_description">Imagen de introducción a la app</string>
 

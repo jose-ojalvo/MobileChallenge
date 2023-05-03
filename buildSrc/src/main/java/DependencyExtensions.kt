@@ -145,6 +145,9 @@ val DependencyHandler.CONSTANTS
 val DependencyHandler.ENTITY
     get() = implementation(project(mapOf("path" to Modules.domainEntity)))
 
+val DependencyHandler.FAVORITES
+    get() = implementation(project(mapOf("path" to Modules.presentationFavorites)))
+
 val DependencyHandler.FRAMEWORK
     get() = implementation(project(mapOf("path" to Modules.coreFramework)))
 

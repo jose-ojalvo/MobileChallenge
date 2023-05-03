@@ -18,7 +18,7 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import androidx.compose.material.CircularProgressIndicator
 import com.jojalvo.framework.base.jetpack.rememberFlowWithLifecycle
 import com.jojalvo.theme.MobileChallengeColors
-import com.jojalvo.users.UsersViewState
+import com.jojalvo.users.list.UsersViewState
 import com.jojalvo.entity.user.Result
 import com.jojalvo.users.list.viewmodel.UsersViewModel
 
@@ -61,7 +61,6 @@ fun UsersContent(
                 items(pagingItems.itemCount) { index ->
                     pagingItems[index]?.let {
                         UserRow(
-                            viewModel,
                             dto = it,
                             onDetailClick = { selectItem.invoke(it) }
                         )

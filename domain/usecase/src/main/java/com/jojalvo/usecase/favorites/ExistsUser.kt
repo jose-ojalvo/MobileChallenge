@@ -3,6 +3,7 @@ package com.jojalvo.usecase.favorites
 import androidx.annotation.VisibleForTesting
 import com.jojalvo.framework.base.network.DataState
 import com.jojalvo.framework.base.usecase.DataStateUseCase
+import com.jojalvo.framework.base.usecase.LocalUseCase
 import com.jojalvo.repository.favorites.FavoritesRepository
 import com.jojalvo.repository.users.UsersRepository
 import kotlinx.coroutines.flow.FlowCollector
@@ -18,7 +19,7 @@ class ExistsUser
 constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val userRepository: FavoritesRepository
-) : DataStateUseCase<ExistsUser.Params, Boolean>() {
+) : LocalUseCase<ExistsUser.Params, Boolean>() {
 
     data class Params(
         val title: String,
@@ -26,9 +27,8 @@ constructor(
         val last: String
     )
 
-    override suspend fun FlowCollector<DataState<Boolean>>.execute(params: Params) {
+    override suspend fun FlowCollector<Boolean>.execute(params: Params) {
         val result = userRepository.existsUser(params.title, params.first, params.last)
-        emit(DataState.Success(result))
+        emit(result)
     }
-
 }
