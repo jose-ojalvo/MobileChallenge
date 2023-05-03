@@ -24,13 +24,10 @@ import com.jojalvo.theme.MobileChallengeColors
  */
 @Composable
 fun FavoritesContent(
-    viewModel: FavoritesViewModel = hiltViewModel(),
     paddingValues: PaddingValues,
-    viewState: FavoritesViewState,
+    userList: List<Result>,
     selectItem: (Result) -> Unit = {}
 ) {
-    val pagingItems = rememberFlowWithLifecycle(viewState.pagedData).collectAsLazyPagingItems()
-
     LazyColumn(
         contentPadding = paddingValues,
         modifier = Modifier
@@ -38,24 +35,12 @@ fun FavoritesContent(
             .padding(top = 4.dp)
             .background(MobileChallengeColors.background),
     ) {
-        items(pagingItems.itemCount) { index ->
-            pagingItems[index]?.let {
+        items(userList.count()) { index ->
+            userList[index].let {
                 FavoriteRow(
                     dto = it,
                     onDetailClick = { selectItem.invoke(it) }
                 )
-            }
-        }
-
-        if (pagingItems.loadState.append == LoadState.Loading) {
-            item {
-                Box(
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(24.dp)
-                ) {
-                    CircularProgressIndicator(Modifier.align(Alignment.Center))
-                }
             }
         }
     }

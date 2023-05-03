@@ -11,5 +11,6 @@ import kotlinx.coroutines.flow.emptyFlow
  *   @email josealejandro025@gmail.com
  */
 data class FavoritesViewState(
-    val pagedData: Flow<PagingData<Result>> = emptyFlow()
+    val pagedData: Flow<PagingData<Result>> = emptyFlow(),
+    val userList: List<Result> = emptyList()
 )

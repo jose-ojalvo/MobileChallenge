@@ -5,10 +5,10 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.jojalvo.entity.user.Result
-import com.jojalvo.framework.base.usecase.FlowPagingUseCase
+import com.jojalvo.framework.base.usecase.LocalUseCase
 import com.jojalvo.repository.favorites.FavoritesRepository
-import com.jojalvo.usecase.users.FavUserPagingSource
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.FlowCollector
 import javax.inject.Inject
 
 /**
@@ -21,16 +21,10 @@ class GetFavUsers
 constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val favRepository: FavoritesRepository
-) : FlowPagingUseCase<GetFavUsers.Params, Result>() {
+) : LocalUseCase<Unit, List<Result>>() {
 
-    data class Params(
-        val pagingConfig: PagingConfig
-    )
-
-    override fun execute(params: Params): Flow<PagingData<Result>> {
-        return Pager(
-            config = params.pagingConfig,
-            pagingSourceFactory = { FavUserPagingSource(favRepository) }
-        ).flow
+    override suspend fun FlowCollector<List<Result>>.execute(params: Unit) {
+        val list = favRepository.getFavUsers()
+        emit(list)
     }
 }

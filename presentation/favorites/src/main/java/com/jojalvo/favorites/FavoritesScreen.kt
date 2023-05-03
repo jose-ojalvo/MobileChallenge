@@ -1,4 +1,8 @@
-@file:OptIn(ExperimentalMaterialApi::class, ExperimentalMaterialApi::class)
+@file:OptIn(
+    ExperimentalMaterialApi::class,
+    ExperimentalMaterialApi::class,
+    ExperimentalMaterialApi::class
+)
 
 package com.jojalvo.favorites
 
@@ -15,10 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.jojalvo.component.widget.EmptyView
-import com.jojalvo.component.widget.ErrorView
-import com.jojalvo.component.widget.LoadingView
-import com.jojalvo.component.widget.MCToolbar
+import com.jojalvo.component.widget.*
 import com.jojalvo.favorites.view.FavoritesContent
 import com.jojalvo.favorites.viewmodel.FavoritesUIState
 import com.jojalvo.favorites.viewmodel.FavoritesViewModel
@@ -62,9 +63,10 @@ fun FavoritesPage(
 ) {
     when (uiState) {
         is FavoritesUIState.UsersData -> FavoritesContent(
-            viewModel = viewModel,
             paddingValues = paddings,
-            viewState = uiState.cast<FavoritesUIState.UsersData<FavoritesViewState>>().result,
+            userList = uiState.cast<
+                    FavoritesUIState.UsersData<FavoritesViewState>
+                    >().result.userList,
             selectItem = { navigator.openDetail(it) },
         )
         is FavoritesUIState.Error -> {
@@ -73,7 +75,7 @@ fun FavoritesPage(
                 action = { viewModel.getFavUsers() }
             )
         }
-        is FavoritesUIState.Empty -> EmptyView(modifier = Modifier)
+        is FavoritesUIState.Empty -> LottieEmptyView()
         is FavoritesUIState.Loading -> LoadingView()
     }
     LaunchedEffect(key1 = viewModel, block = { viewModel.getFavUsers() })

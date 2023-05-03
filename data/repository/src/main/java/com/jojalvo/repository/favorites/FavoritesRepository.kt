@@ -20,9 +20,8 @@ constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val dao: FavoriteDao
 ) {
-    suspend fun getFavUsers(): Flow<List<Result>> = flow {
-        emit(dao.getFavUserList().toUserDtoList())
-    }
+    suspend fun getFavUsers(): List<Result> =
+        dao.getFavUserList().toUserDtoList()
 
     suspend fun saveUserItem(user: Result?) {
         user?.let {
