@@ -15,7 +15,6 @@ dependencies {
     ENTITY
     addCommonDependencies()
     addHiltDependencies()
-    addTestDependencies()
     addStorageDependencies()
     addPreferenceDependencies()
 }

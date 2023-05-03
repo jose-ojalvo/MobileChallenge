@@ -32,6 +32,7 @@ object Versions {
     const val archCoreTest = "2.2.0"
     const val testTurbine = "0.7.0"
     const val coroutines = "1.6.1"
+    const val hamcrestLibrary = "1.3"
     const val lifecycleRuntime = "2.4.1"
     const val fragmentKtx = "1.5.5"
     const val activityKtx = "1.4.0"

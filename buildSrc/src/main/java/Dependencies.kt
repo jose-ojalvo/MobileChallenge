@@ -44,6 +44,7 @@ object Dependencies {
     const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinPlugin}"
     const val material = "com.google.android.material:material:${Versions.material}"
     const val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val hamcrestLibrary = "org.hamcrest:hamcrest-core:${Versions.hamcrestLibrary}"
     const val coroutineAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     const val lifecycleRuntime =

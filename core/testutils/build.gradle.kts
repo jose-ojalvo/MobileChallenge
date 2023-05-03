@@ -16,4 +16,5 @@ dependencies {
     implementation(Dependencies.moshi)
     addNetworkDependency()
     api(Dependencies.mockWebServer)
+    implementation(Dependencies.hamcrest)
 }
