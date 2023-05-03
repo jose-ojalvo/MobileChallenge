@@ -1,8 +1,10 @@
 package com.jojalvo.model.dto.users
 
+import com.jojalvo.entity.user.Name
+import com.jojalvo.entity.user.Result
+import com.jojalvo.model.local.users.NameEmbedded
 import com.jojalvo.model.local.users.UserEntity
 import com.jojalvo.model.remote.users.UserResponse
-import com.jojalvo.entity.user.Result
 
 /**
  *   @author jojalvo
@@ -28,7 +30,7 @@ fun UserResponse.toUserDto() = Result(
 fun UserResponse.toUserEntity() = UserEntity(
     id = null,
     gender = gender,
-    name = name,
+    name = name?.toNameEmbedded(),
     location = location,
     email = email,
     dob = dob,
@@ -38,7 +40,7 @@ fun UserResponse.toUserEntity() = UserEntity(
 
 fun UserEntity.toUserDto() = Result(
     gender = gender.orEmpty(),
-    name = name,
+    name = name?.toName(),
     location = location,
     email = email.orEmpty(),
     login = null,
@@ -51,41 +53,23 @@ fun UserEntity.toUserDto() = Result(
     nat = String()
 )
 
+fun Name.toNameEmbedded() = NameEmbedded(
+    title = title,
+    first = first,
+    last = last
+)
+
+fun NameEmbedded.toName() = Name(
+    title = title,
+    first = first,
+    last = last
+)
+
 @JvmName("toUserResponseListUserEntity")
-fun List<UserResponse>.toUserEntityList() =
-    map {
-        it.toUserEntity()
-    }.sortedWith(
-        compareBy<UserEntity>
-        {
-            it.name?.first
-        }.thenBy {
-            it.name?.last
-        }
-    )
+fun List<UserResponse>.toUserEntityList() = map { it.toUserEntity() }
 
 @JvmName("toUserDtoListUserResponse")
-fun List<UserResponse>.toUserDtoList() =
-    map {
-        it.toUserDto()
-    }.sortedWith(
-        compareBy<Result>
-        {
-            it.name?.first
-        }.thenBy {
-            it.name?.last
-        }
-    )
+fun List<UserResponse>.toUserDtoList() = map { it.toUserDto() }
 
 @JvmName("toUserDtoListUserEntity")
-fun List<UserEntity>.toUserDtoList() =
-    map {
-        it.toUserDto()
-    }.sortedWith(
-        compareBy<Result>
-        {
-            it.name?.first
-        }.thenBy {
-            it.name?.last
-        }
-    )
+fun List<UserEntity>.toUserDtoList() = map { it.toUserDto() }

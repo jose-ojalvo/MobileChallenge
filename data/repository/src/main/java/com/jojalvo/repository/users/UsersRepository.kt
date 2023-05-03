@@ -1,7 +1,7 @@
 package com.jojalvo.repository.users
 
 import androidx.annotation.VisibleForTesting
-import com.jojalvo.local.dao.UsersDao
+import com.jojalvo.local.dao.user.UsersDao
 import com.jojalvo.remote.service.users.UsersService
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -32,7 +32,7 @@ constructor(
             val response = remoteData.results
             if (!response.isNullOrEmpty()) {
                 dao.insert(response.toUserEntityList())
-                emit(response.toUserDtoList())
+                emit(dao.getUsersList().toUserDtoList())
             } else {
                 emit(emptyList())
             }
@@ -45,11 +45,14 @@ constructor(
         if (!response.isNullOrEmpty()) {
             dao.clearData()
             dao.insert(response.toUserEntityList())
-            emit(response.toUserDtoList())
+            emit(dao.getUsersList().toUserDtoList())
         } else {
             emit(emptyList())
         }
     }
 
     suspend fun getLocalUserList() = dao.getUsersList()
+
+    suspend fun existsUser(title: String, firstName: String, lastName: String) =
+        dao.existsUser(title, firstName, lastName)
 }

@@ -1,8 +1,10 @@
 package com.jojalvo.repository.di
 
 import android.content.Context
-import com.jojalvo.local.dao.UsersDao
+import com.jojalvo.local.dao.favorite.FavoriteDao
+import com.jojalvo.local.dao.user.UsersDao
 import com.jojalvo.remote.service.users.UsersService
+import com.jojalvo.repository.favorites.FavoritesRepository
 import com.jojalvo.repository.onboarding.OnBoardingRepository
 import com.jojalvo.repository.users.UsersRepository
 import dagger.Module
@@ -33,5 +35,9 @@ class RepositoryModule {
         service: UsersService,
         dao: UsersDao
     ) = UsersRepository(service, dao)
+
+    @Singleton
+    @Provides
+    fun providesFavoritesRepository(dao: FavoriteDao) = FavoritesRepository(dao)
 
 }

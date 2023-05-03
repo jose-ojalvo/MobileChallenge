@@ -4,7 +4,9 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.jojalvo.local.converter.*
-import com.jojalvo.local.dao.UsersDao
+import com.jojalvo.local.dao.favorite.FavoriteDao
+import com.jojalvo.local.dao.user.UsersDao
+import com.jojalvo.model.local.favorites.FavUserEntity
 import com.jojalvo.model.local.users.UserEntity
 
 /**
@@ -13,14 +15,13 @@ import com.jojalvo.model.local.users.UserEntity
  *   @email josealejandro025@gmail.com
  */
 @Database(
-    entities = [UserEntity::class],
+    entities = [UserEntity::class, FavUserEntity::class],
     version = 1,
     exportSchema = false
 )
 @TypeConverters(
     value = [
         StringListConverter::class,
-        NameConverter::class,
         StreetConverter::class,
         CoordinatesConverter::class,
         TimezoneConverter::class,
@@ -32,5 +33,7 @@ import com.jojalvo.model.local.users.UserEntity
 abstract class MCDatabase : RoomDatabase() {
 
     abstract fun userDao(): UsersDao
+
+    abstract fun favoriteDao(): FavoriteDao
 
 }

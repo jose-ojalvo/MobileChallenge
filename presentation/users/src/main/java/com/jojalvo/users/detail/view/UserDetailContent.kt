@@ -24,5 +24,9 @@ fun UserDetailContent(
         item("contentInfo") {
             UserDetailInfoView(data = data)
         }
+
+        item("favButton") {
+            UserDetailButton(data = data)
+        }
     }
 }

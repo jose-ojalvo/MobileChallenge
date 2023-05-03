@@ -1,5 +1,7 @@
 package com.jojalvo.users.detail.viewmodel
 
+import com.jojalvo.entity.user.Result
+
 
 /**
  *   @author jojalvo
@@ -8,7 +10,6 @@ package com.jojalvo.users.detail.viewmodel
  */
 interface UserDetailUIState<out T> {
     object Loading : UserDetailUIState<Nothing>
-    data class Error(val throwable: Throwable) : UserDetailUIState<Nothing>
-    data class UserDetail<T>(val result: T) : UserDetailUIState<T>
+    object ExistingUser: UserDetailUIState<Nothing>
     object Empty : UserDetailUIState<Nothing>
 }

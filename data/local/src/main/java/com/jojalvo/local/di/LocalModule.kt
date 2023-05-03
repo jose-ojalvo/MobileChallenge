@@ -2,7 +2,8 @@ package com.jojalvo.local.di
 
 import android.content.Context
 import androidx.room.Room
-import com.jojalvo.local.dao.UsersDao
+import com.jojalvo.local.dao.favorite.FavoriteDao
+import com.jojalvo.local.dao.user.UsersDao
 import com.jojalvo.local.db.MCDatabase
 import dagger.Module
 import dagger.Provides
@@ -43,5 +44,10 @@ class LocalModule {
     @Singleton
     fun provideUserDao(appDatabase: MCDatabase): UsersDao =
         appDatabase.userDao()
+
+    @Provides
+    @Singleton
+    fun provideFavDao(appDatabase: MCDatabase): FavoriteDao =
+        appDatabase.favoriteDao()
 
 }

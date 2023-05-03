@@ -48,4 +48,8 @@
     <string name="text_country">Country</string>
     <string name="text_city">City</string>
     <string name="text_phone">Phone number</string>
+    <string name="text_user_added_to_favs">User added to favourites!</string>
+    <string name="text_user_removed_from_favs">User removed from favourites!</string>
+    <string name="text_user_add_to_favorites">Add to favourites</string>
+    <string name="text_user_delete_from_favorites">Delete from favorites</string>
 </resources>

@@ -8,20 +8,6 @@ import com.jojalvo.entity.user.*
  *   @since 27/4/23
  *   @email josealejandro025@gmail.com
  */
-
-class NameConverter {
-    @TypeConverter
-    fun fromName(name: Name): String {
-        return "${name.title}|${name.first}|${name.last}"
-    }
-
-    @TypeConverter
-    fun toName(nameString: String): Name {
-        val split = nameString.split("|")
-        return Name(split[0], split[1], split[2])
-    }
-}
-
 class StreetConverter {
     @TypeConverter
     fun fromStreet(street: Street): String {

@@ -41,4 +41,8 @@
     <string name="text_country">País</string>
     <string name="text_city">Ciudad</string>
     <string name="text_phone">Nº teléfono</string>
+    <string name="text_user_added_to_favs">¡Usuario añadido a favoritos!</string>
+    <string name="text_user_removed_from_favs">¡Usuario eliminado de favoritos!</string>
+    <string name="text_user_add_to_favorites">Añadir a favoritos</string>
+    <string name="text_user_delete_from_favorites">Eliminar de favoritos</string>
 </resources>

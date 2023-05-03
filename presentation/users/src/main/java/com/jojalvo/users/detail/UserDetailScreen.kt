@@ -29,13 +29,14 @@ fun UserDetailScreen(
     viewModel: UserDetailViewModel = hiltViewModel(),
     navigator: NavigationProvider
 ) {
+    viewModel.searchExistingUsers(user!!)
     UserDetailBody(
         pressOnBack = {
             navigator.navigateUp()
         }
     ) {
         UserDetailContent(
-            data = user!!
+            data = user
         )
     }
 }

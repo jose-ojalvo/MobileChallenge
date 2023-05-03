@@ -1,7 +1,9 @@
 package com.jojalvo.usecase.di
 
 import com.jojalvo.repository.users.UsersRepository
+import com.jojalvo.usecase.users.ExistsUser
 import com.jojalvo.usecase.users.GetCachedUsers
+import com.jojalvo.usecase.users.GetLocalUsers
 import com.jojalvo.usecase.users.GetUpdatedUsers
 import dagger.Module
 import dagger.Provides
@@ -27,5 +29,15 @@ class UsersDomainModule {
     @Provides
     fun providesGetRemoteUsers(repository: UsersRepository): GetUpdatedUsers =
         GetUpdatedUsers(repository)
+
+    @Singleton
+    @Provides
+    fun providesGetLocalUsers(repository: UsersRepository): GetLocalUsers =
+        GetLocalUsers(repository)
+
+    @Singleton
+    @Provides
+    fun providesExistsUser(repository: UsersRepository): ExistsUser =
+        ExistsUser(repository)
 
 }
