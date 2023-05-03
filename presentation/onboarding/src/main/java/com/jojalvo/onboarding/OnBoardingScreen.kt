@@ -19,6 +19,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -91,7 +92,7 @@ fun PagerScreen(onBoarding: OnBoardingPage, context: Context) {
     ) {
         Image(
             modifier = Modifier
-                .fillMaxWidth(.5f)
+                .fillMaxWidth(.7f)
                 .fillMaxHeight(.7f),
             painter = painterResource(id = onBoarding.image),
             contentDescription = context.getString(R.string.on_boarding_image_content_description)
@@ -99,6 +100,7 @@ fun PagerScreen(onBoarding: OnBoardingPage, context: Context) {
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = onBoarding.title,
+            textAlign = TextAlign.Center,
             fontSize = MobileChallengeTypography.displayMedium.fontSize,
             fontWeight = FontWeight.Bold,
             color = MobileChallengeColors.onTertiary
@@ -109,6 +111,7 @@ fun PagerScreen(onBoarding: OnBoardingPage, context: Context) {
                 .padding(horizontal = 40.dp)
                 .padding(top = 20.dp),
             text = onBoarding.description,
+            textAlign = TextAlign.Center,
             fontSize = MobileChallengeTypography.headlineMedium.fontSize,
             fontWeight = FontWeight.Medium,
             color = MobileChallengeColors.onTertiary

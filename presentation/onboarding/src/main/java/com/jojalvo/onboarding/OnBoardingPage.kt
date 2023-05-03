@@ -16,19 +16,19 @@ sealed class OnBoardingPage(
     val description: String
 ) {
     class First(context: Context) : OnBoardingPage(
-        image = R.drawable.ic_app_back,
+        image = R.drawable.ic_app_illustration,
         title = context.getString(R.string.on_boarding_first_step_title),
         description = context.getString(R.string.on_boarding_first_step_description)
     )
 
     class Second(context: Context) : OnBoardingPage(
-        image = R.drawable.ic_app_back,
+        image = R.drawable.ic_users_selection,
         title = context.getString(R.string.on_boarding_second_step_title),
         description = context.getString(R.string.on_boarding_second_step_description)
     )
 
     class Third(context: Context) : OnBoardingPage(
-        image = R.drawable.ic_app_back,
+        image = R.drawable.ic_app_slider,
         title = context.getString(R.string.on_boarding_third_step_title),
         description = context.getString(R.string.on_boarding_third_step_description)
     )
