@@ -61,7 +61,7 @@ fun UserDetailBody(
 @Preview(showBackground = true, name = "Light Mode")
 @Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES, name = "Dark Mode")
 @Composable
-fun ProductDetailScreenPreview() {
+fun UserDetailScreenPreview() {
     MobileChallengeTheme {
         Surface {
             UserDetailBody {}
