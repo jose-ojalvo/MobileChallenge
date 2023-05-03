@@ -3,6 +3,7 @@ package com.jojalvo.usecase.di
 import com.jojalvo.repository.favorites.FavoritesRepository
 import com.jojalvo.usecase.favorites.AddUser
 import com.jojalvo.usecase.favorites.DeleteUser
+import com.jojalvo.usecase.favorites.ExistsUser
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,5 +28,10 @@ class FavoritesDomainModule {
     @Provides
     fun providesDeleteUser(repository: FavoritesRepository): DeleteUser =
         DeleteUser(repository)
+
+    @Singleton
+    @Provides
+    fun providesExistsUser(repository: FavoritesRepository): ExistsUser =
+        ExistsUser(repository)
 
 }

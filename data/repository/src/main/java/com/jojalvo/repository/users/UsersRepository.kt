@@ -52,7 +52,4 @@ constructor(
     }
 
     suspend fun getLocalUserList() = dao.getUsersList()
-
-    suspend fun existsUser(title: String, firstName: String, lastName: String) =
-        dao.existsUser(title, firstName, lastName)
 }

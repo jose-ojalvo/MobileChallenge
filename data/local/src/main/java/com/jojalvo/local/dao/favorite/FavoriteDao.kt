@@ -23,4 +23,11 @@ interface FavoriteDao : BaseDao<FavUserEntity> {
     )
     suspend fun deleteItem(title: String, first: String, last: String)
 
+    @Query(
+        "SELECT EXISTS(SELECT 1 FROM ${FavUserEntity.TABLE_NAME} WHERE name_title = :title AND " +
+                "name_first = :firstName AND " +
+                "name_last = :lastName) as exists_user"
+    )
+    suspend fun existsUser(title: String, firstName: String, lastName: String): Boolean
+
 }

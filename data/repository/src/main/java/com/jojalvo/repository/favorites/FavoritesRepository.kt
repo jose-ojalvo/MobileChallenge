@@ -28,4 +28,7 @@ constructor(
 
     suspend fun deleteUser(title: String, first: String, last: String) =
         dao.deleteItem(title, first, last)
+
+    suspend fun existsUser(title: String, firstName: String, lastName: String) =
+        dao.existsUser(title, firstName, lastName)
 }

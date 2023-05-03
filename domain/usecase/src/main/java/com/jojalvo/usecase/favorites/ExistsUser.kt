@@ -1,8 +1,9 @@
-package com.jojalvo.usecase.users
+package com.jojalvo.usecase.favorites
 
 import androidx.annotation.VisibleForTesting
 import com.jojalvo.framework.base.network.DataState
 import com.jojalvo.framework.base.usecase.DataStateUseCase
+import com.jojalvo.repository.favorites.FavoritesRepository
 import com.jojalvo.repository.users.UsersRepository
 import kotlinx.coroutines.flow.FlowCollector
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class ExistsUser
 @Inject
 constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
-    internal val userRepository: UsersRepository
+    internal val userRepository: FavoritesRepository
 ) : DataStateUseCase<ExistsUser.Params, Boolean>() {
 
     data class Params(
@@ -26,8 +27,8 @@ constructor(
     )
 
     override suspend fun FlowCollector<DataState<Boolean>>.execute(params: Params) {
-        val results = userRepository.existsUser(params.title, params.first, params.last)
-        emit(DataState.Success(results))
+        val result = userRepository.existsUser(params.title, params.first, params.last)
+        emit(DataState.Success(result))
     }
 
 }

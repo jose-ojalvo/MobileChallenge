@@ -4,7 +4,7 @@ import com.jojalvo.entity.user.Result
 import com.jojalvo.framework.base.mvvm.MvvmViewModel
 import com.jojalvo.usecase.favorites.AddUser
 import com.jojalvo.usecase.favorites.DeleteUser
-import com.jojalvo.usecase.users.ExistsUser
+import com.jojalvo.usecase.favorites.ExistsUser
 import com.jojalvo.utils.extension.safeNull
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
